@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
   if (hour >= 0 && hour < 12) {
     message = "Im awake at";
-  } else if (hour >= 12 && hour < 18) {
+  } else if (hour >= 12 && hour < 23) {
     message = "Im coding now at";
   } else {
     message = "Sleeping right now";
