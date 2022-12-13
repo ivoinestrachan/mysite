@@ -8,6 +8,21 @@ const Home: NextPage = () => {
   const [time, setTime] = useState(new Date());
 
   setInterval(() => setTime(new Date()), 1000);
+
+  const currentTime = new Date();
+
+  const hour = currentTime.getHours();
+
+  let message;
+
+  if (hour >= 0 && hour < 12) {
+    message = "Im awake at";
+  } else if (hour >= 12 && hour < 18) {
+    message = "Im coding now at";
+  } else {
+    message = "Sleeping right now";
+  }
+
   return (
     <div className="flex min-h-[700px] flex-col items-center justify-center  max-w-[1024px] md:px-20 m-auto ">
       <Head>
@@ -28,7 +43,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="font-mono font mb-2">
-          {time.toLocaleTimeString()} EST
+          {message} {time.toLocaleTimeString()} EST
         </div>
 
         <div className="flex gap-3 font-mono text-[18px] items-center">
