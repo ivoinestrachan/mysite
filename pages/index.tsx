@@ -1,9 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 import Google from "../public/assets/google.jpg";
 
 const Home: NextPage = () => {
+  const [time, setTime] = useState(new Date());
+
+  setInterval(() => setTime(new Date()), 1000);
   return (
     <div className="flex min-h-[700px] flex-col items-center justify-center  max-w-[1024px] md:px-20 m-auto ">
       <Head>
@@ -23,6 +27,10 @@ const Home: NextPage = () => {
           Ivoine Strachan
         </div>
 
+        <div className="font-mono font mb-2">
+          {time.toLocaleTimeString()} EST
+        </div>
+
         <div className="flex gap-3 font-mono text-[18px] items-center">
           <a href="https://github.com/ivoinestrachan">
             <p className="underline">Github</p>
@@ -39,7 +47,11 @@ const Home: NextPage = () => {
 
         <div className="font-mono mt-5">
           I am a high school dropout with a passion for technology and making a
-          difference. I am currently working on <span className="underline"><a href="https://hackclub.com/bank/">HackClub Bank</a></span> App, an {}
+          difference. I am currently working on{" "}
+          <span className="underline">
+            <a href="https://hackclub.com/bank/">HackClub Bank</a>
+          </span>{" "}
+          App, an {}
           <span className="underline">
             <a href="https://github.com/hackclub/bankapp">open-source</a>
           </span>{" "}
