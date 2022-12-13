@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import Google from "../public/assets/google.jpg";
+import Google from "../public/assets/profile.png";
 
 const Home: NextPage = () => {
   const [time, setTime] = useState(new Date());
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
           alt="ivoine"
           height={80}
           width={150}
-          className="cover rounded-[8px] mb-[16px] ml-auto mr-auto md:m-0"
+          className="cover rounded-full mb-[16px] ml-auto mr-auto md:m-0"
         />
         <div className="font-mono font-extrabold text-[36px]">
           Ivoine Strachan
