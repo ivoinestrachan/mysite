@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="font-mono font mb-2">
-          {message} {time.toLocaleTimeString()} EST
+          {message} {time.toLocaleTimeString()} PST
         </div>
 
         <div className="flex gap-3 font-mono text-[18px] items-center">
