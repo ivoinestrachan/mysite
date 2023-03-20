@@ -64,14 +64,13 @@ const Home: NextPage = () => {
           I am a high school dropout with a passion for technology and making a
           difference. I am currently working on{" "}
           <span className="underline">
-            <a href="https://hackclub.com/bank/">HackClub Bank</a>
+            <a href="https://sinerider.com/">Sinerider</a>
           </span>{" "}
-          App, an {}
+           an {}
           <span className="underline">
-            <a href="https://github.com/hackclub/bankapp">open-source</a>
+            <a href="https://github.com/hackclub/sinerider">open-source</a>
           </span>{" "}
-          project that aims to democratize finance and empower young people to
-          take control of their financial futures. I am committed to learning
+          game about love and graphing I am committed to learning
           and growing, and I believe that education is not limited to the
           classroom. Join me on this journey and let's build a better future
           together.
