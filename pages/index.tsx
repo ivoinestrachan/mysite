@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import Google from "../public/assets/profile.png";
+import Google from "../public/assets/pfp.jpeg";
 
 const Home: NextPage = () => {
   const [time, setTime] = useState(new Date());
