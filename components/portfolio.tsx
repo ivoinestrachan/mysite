@@ -109,7 +109,7 @@ const Portfolio = () => {
                 <p className="sm:text-white">{item.githubbio}</p>
               </div>
             </a>
-            <p className="sm:text-white w-[500px]">{item.desc}</p>
+            <p className="sm:text-white sm:w-[500px] w-[300px]">{item.desc}</p>
           </div>
         ))}
       </div>
