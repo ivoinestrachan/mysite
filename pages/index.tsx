@@ -72,6 +72,9 @@ const Home: NextPage = () => {
             <li>played in a national CARIFTA chess tournament</li>
           </div>
         </div>
+        <div>
+        <iframe className="mt-5" src="https://open.spotify.com/embed/track/7yq4Qj7cqayVTp3FF9CWbm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
       </main>
      </div>
       </div>
