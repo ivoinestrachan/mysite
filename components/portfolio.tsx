@@ -9,6 +9,7 @@ const Portfolio = () => {
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697059653/IMG_7261_rbog4t.jpg",
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697059664/IMG_7266_eyprve.jpg",
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697059658/IMG_7259_idd6tr.jpg",
+          "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697119217/IMG_3306_from_Hack_Club_via_Slack_ui6irr.jpg"
         ],
         title: "Flying to San Francisco",
         desc: "I flew to san francisco with the hope of getting an internship and meeting wonderful new people and building cool project i was able to get a referral at google.",
