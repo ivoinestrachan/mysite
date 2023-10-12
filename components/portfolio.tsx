@@ -68,10 +68,10 @@ const Portfolio = () => {
         Showing my journey and what im working on!
       </div>
 
-      <div className="sm:overflow-y-auto h-[80vh] mt-5">
+      <div className="sm:overflow-y-auto h-[80vh] mt-5 sm:w-[900px]">
         {journeyData.journey.map((item, index) => (
           <div key={index}>
-            <p className="text-gray-300 mt-5">{item.date}</p>
+            <p className="sm:text-gray-300 mt-5">{item.date}</p>
             <div className="flex items-center gap-4 flex-wrap  sm:justify-start justify-center mt-2">
               {item.image &&
                 //@ts-ignore
@@ -98,7 +98,7 @@ const Portfolio = () => {
             <p className="sm:text-white mt-5 font-bold text-[24px]">{item.title}</p>
             <a href={item.link}>
               <div
-                className={`border rounded-md pl-3 py-3 sm:w-[25%] ${
+                className={`border rounded-md pl-3 py-3 sm:w-[50%] ${
                   item.github ? "border-gray-400" : "border-none"
                 }`}
               >
