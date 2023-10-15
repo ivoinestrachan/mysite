@@ -24,6 +24,15 @@ const Portfolio = () => {
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697062288/Ivoine_Journey_1_._dxyzox.png",
         ],
         link: "https://github.com/hackclub/sinerider",
+        youtubeEmbed: {
+          src: "https://www.youtube.com/embed/35nDYoIwiA8?si=-tdWWjk70juv33Vh",
+          title: "Sinerider",
+          allow:
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+          width: 370,
+          height: 315,
+          allowfullscreen: true
+        }
       },
       {
         date: "Aug 10th 2023",
@@ -87,6 +96,21 @@ const Portfolio = () => {
                     />
                   </div>
                 ))}
+
+{item.youtubeEmbed && (
+  <div key={`youtube-${index}`} className="mt-2">
+    <iframe
+      width={item.youtubeEmbed.width}
+      height={item.youtubeEmbed.height}
+      src={item.youtubeEmbed.src}
+      title={item.youtubeEmbed.title}
+      allow={item.youtubeEmbed.allow}
+      frameborder="0"
+      allowfullscreen={item.youtubeEmbed.allowfullscreen}
+    />
+  </div>
+)}
+
             </div>
 
             {item.video && (
