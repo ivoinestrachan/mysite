@@ -105,8 +105,8 @@ const Portfolio = () => {
       src={item.youtubeEmbed.src}
       title={item.youtubeEmbed.title}
       allow={item.youtubeEmbed.allow}
-      frameborder="0"
-      allowfullscreen={item.youtubeEmbed.allowfullscreen}
+      frameBorder="0"
+      allowFullScreen={item.youtubeEmbed.allowfullscreen}
     />
   </div>
 )}
