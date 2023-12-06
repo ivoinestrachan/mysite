@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="items-center justify-center m-auto w-[100%] md:px-10 px-5 mt-10">
+      <main className="items-center justify-center m-auto w-[100%] md:px-10 px-5 mt-5">
         <Image
           src={Google}
           alt="ivoine"
