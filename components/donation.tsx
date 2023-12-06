@@ -32,7 +32,7 @@ const Donations = (props: Props) => {
 
   return (
     <div className="mt-2">
-      <div><span className="font-bold">Goal: </span>${totalAmount.toFixed(2)} / $4,000</div>
+      <div><span className="font-bold">Goal: </span>${totalAmount.toFixed(2)} / $5,000</div>
       {donationsToShow.map((donation: Donation) => (
         <div key={donation.id}>
           <div    className={`flex text-center gap-2 ${donation.amount_cents > 24000 ? 'ts' : 'bg-green-400'} sm:w-[50%] border-b py-2 pl-2`}>
