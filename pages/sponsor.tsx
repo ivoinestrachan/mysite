@@ -63,7 +63,7 @@ const sponsor = () => {
           >
             Buildspace
           </a>
-          , a 4-month program where I can build more tech\nprojects, like
+          , a 4-month program where I can build more tech projects, like
           developing my game called{" "}
           <a href="https://sinerider.com" className="text-blue-500 underline">
             Sinerider
