@@ -8,8 +8,7 @@ const sponsor = () => {
       "Hello everyone, I'm Ivoine! I have some great news and a favor to ask of you.",
     secintro:
       "I'm an 18-year-old from the Bahamas, where life has been quite an adventure. Raised by my\ngrandmother, I discovered my passion for chess and technology early on, competing in chess\ntournaments in Jamaica and the Bahamas, and exploring game development on Roblox.\nDespite losing my mother at 16 and starting my coding journey on a smartphone, I've never\ngiven up on my dream to create and build amazing projects.",
-    thirdintro:
-      "Recently, I was accepted into Buildspace, a 4-month program where I can build more tech\nprojects, like developing my game called  Sinerider and turning a dryer into a cotton candy\nmachine! This program is a stepping stone towards a brighter future in tech - and many have\ntold me that proving myself here could open doors to exciting job opportunities.",
+   
     image: [
       "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898310/Deet_IMG_1289_xo1vaq.jpg",
       "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898453/Ivoine_journey_image_cwqbe8.png",
@@ -17,7 +16,7 @@ const sponsor = () => {
     support:
       "However, this opportunity comes with its challenges, notably the costs. Here's a breakdown of\nwhat I'm facing:",
     flight: "Plane ticket: $700 - $800",
-    rent: "Rent and security deposit: $850/month, security deposit $1050",
+    rent: "Rent and security deposit: $850/month, security deposit $1,050",
     expenses:
       "Monthly expenses: Including bus/train fares, phone bills ($50), and groceries",
 
@@ -41,7 +40,8 @@ const sponsor = () => {
         <div>{data.intro}</div>
         <div>{data.secintro}</div>
 
-        <div>{data.thirdintro}</div>
+        <div>Recently, I was accepted into <a href="https://buildspace.so/sf2" className="text-blue-500 underline">Buildspace</a>, a 4-month program where I can build more tech\nprojects, like developing my game called  <a href="https://sinerider.com" className="text-blue-500 underline">Sinerider</a> and turning a dryer into a cotton candy machine! This program is a stepping stone towards a brighter future in tech - and many have told me that proving myself here could open doors to exciting job opportunities.
+</div>
         <div
        className="flex items-center gap-4 flex-wrap  sm:justify-start justify-center mt-2"
         >
