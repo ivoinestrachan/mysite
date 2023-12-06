@@ -35,7 +35,7 @@ const Donations = (props: Props) => {
       <div><span className="font-bold">Goal: </span>${totalAmount.toFixed(2)} / $4,000</div>
       {donationsToShow.map((donation: Donation) => (
         <div key={donation.id}>
-          <div className="flex text-center gap-2 bg-green-400 sm:w-[50%] border-b py-2 pl-2">
+          <div    className={`flex text-center gap-2 ${donation.amount_cents > 24000 ? 'ts' : 'bg-green-400'} sm:w-[50%] border-b py-2 pl-2`}>
             <span className="text-[18px] uppercase">
               DONATION FROM {donation.donor.name}
             </span>

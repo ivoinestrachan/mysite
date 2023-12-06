@@ -16,3 +16,7 @@ body::-webkit-scrollbar {
     overflow-y: auto;
  }
 }
+
+.ts {
+    background-image: repeating-linear-gradient(to bottom right, #e2b142 0px, #fbe87a 50px, #e2b142 100px);
+}
