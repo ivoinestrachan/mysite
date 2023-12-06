@@ -36,10 +36,10 @@ const Donations = (props: Props) => {
       {donationsToShow.map((donation: Donation) => (
         <div key={donation.id}>
           <div className="flex text-center gap-2 bg-green-400 sm:w-[50%] border-b py-2 pl-2">
-            <span className="text-[18px] background">
+            <span className="text-[18px] uppercase">
               DONATION FROM {donation.donor.name}
             </span>
-            <span className="text-[18px] background">
+            <span className="text-[18px]">
               ${donation.amount_cents / 100}.00
             </span>
           </div>
