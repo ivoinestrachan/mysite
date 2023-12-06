@@ -33,7 +33,7 @@ const sponsor = () => {
     flight: "Plane ticket: $700 - $800",
     rent: "Rent and security deposit: $850/month, security deposit $1,050",
     expenses:
-      "Monthly expenses: Including bus/train fares, phone bills ($50), and groceries",
+      "Monthly expenses: Including bus/train fares, phone bills ($50/month), and groceries",
 
     help: "Your support can make a huge difference! Here's how you can contribute:",
     //  donate: "Donations: Every contribution helps, no matter the size. Plus, I’ve partnered with Hack Club a\n501(c)(3) non-profit, making your donations tax-deductible.",
