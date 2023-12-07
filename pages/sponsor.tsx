@@ -28,8 +28,7 @@ const sponsor = () => {
       "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898310/Deet_IMG_1289_xo1vaq.jpg",
       "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898453/Ivoine_journey_image_cwqbe8.png",
     ],
-    support:
-      "However, this opportunity comes with its challenges, notably the costs. Here's a breakdown of\nwhat I'm facing:",
+    support: "I have an incredible opportunity to be part of Buildspace but I need some help getting there. I had a tough upbringing\nin The Bahamas and this opportunity could change my life. Here's a breakdown of what I'm facing:",
     flight: "Plane ticket: $700 - $800",
     rent: "Rent and security deposit: $850/month, security deposit $1,050",
     expenses:
@@ -109,7 +108,7 @@ const sponsor = () => {
           <a href="https://hackclub.com" className="text-blue-500 underline">
             Hack Club
           </a>{" "}
-          a 501(c)(3) non-profit, making your donations tax-deductible{" "}
+          a 501(c)(3) non-profit, making your donations <span className="font-bold">tax-deductible</span>{" "}
           <a
             href="https://hcb.hackclub.com/donations/start/ivoine"
             className="text-blue-500 underline"
