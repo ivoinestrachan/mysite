@@ -37,22 +37,22 @@ const sponsor = () => {
     intro:
       "Hello everyone, I'm Ivoine! I have some great news and a favor to ask of you.",
     secintro:
-      "I'm an 18-year-old from the Bahamas, where life has been quite an adventure. Raised by my\ngrandmother, I discovered my passion for chess and technology early on, competing in chess\ntournaments in Jamaica and the Bahamas, and exploring game development on Roblox.\nDespite losing my mother at 16 and starting my coding journey on a smartphone, I've never\ngiven up on my dream to create and build amazing projects.",
+      "I'm an 18-year-old from the Bahamas, where life has been quite an adventure. Raised by my\ngrandmother, I discovered my passion for chess and technology early on by competing in chess\ntournaments in Jamaica and the Bahamas, and exploring game development on Roblox.\nDespite losing my mother at 16 and learning to code using nothing but my smartphone, I've never\ngiven up on my dream to create and build amazing projects.",
 
     image: [
       "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898310/Deet_IMG_1289_xo1vaq.jpg",
       "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898453/Ivoine_journey_image_cwqbe8.png",
     ],
     support:
-      "I have an incredible opportunity to be part of Buildspace but I need some help getting there. I had a tough upbringing\nin The Bahamas and this opportunity could change my life. Here's a breakdown of what I'm facing:",
+      "I have an incredible opportunity to be part of Buildspace but I need some help getting there. I had a tough upbringing\nin The Bahamas and this opportunity could change my life. For me to participate in Buildspace, I'll need to spend:",
     flight: "Plane ticket: $700 - $800",
     rent: "Rent and security deposit: $850/month, security deposit $1,050",
     expenses:
       "Monthly expenses: Including bus/train fares, phone bills ($50/month), and groceries",
 
-    help: "Your support can make a huge difference! Here's how you can contribute:",
+    help: "Your support would make a huge difference! Here's how you can contribute:",
     //  donate: "Donations: Every contribution helps, no matter the size. Plus, I’ve partnered with Hack Club a\n501(c)(3) non-profit, making your donations tax-deductible.",
-    mono: "Non-Monetary Support: If you prefer, you can also help by donating airline points for the flight, or gift cards for U.S. grocery stores or transit.",
+    mono: "In-kind Support: If you prefer, you can also help by donating airline points for the flight, or gift cards for U.S. grocery stores or transit.",
     promise:
       "I will make the most of this opportunity. You can follow my journey and check out my projects on my",
     thanks:
