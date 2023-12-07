@@ -1,23 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Donations from "../components/donation";
 
 const sponsor = () => {
-
   const [donations, setDonations] = useState([]);
 
   useEffect(() => {
-    fetch('https://bank.hackclub.com/api/v3/organizations/ivoine/donations')
-      .then(response => response.json())
-      .then(data => {
-        const lastTwoDonations = data.slice(0, 2); 
+    fetch("https://bank.hackclub.com/api/v3/organizations/ivoine/donations")
+      .then((response) => response.json())
+      .then((data) => {
+        const lastTwoDonations = data.slice(0, 2);
         setDonations(lastTwoDonations);
       })
-      .catch(error => console.error('Error fetching donations:', error));
+      .catch((error) => console.error("Error fetching donations:", error));
   }, []);
 
-  
+  const donateRef = useRef<HTMLDivElement>(null);
+
+  const scrollToDonate = () => {
+    if (donateRef.current) {
+      donateRef.current.scrollIntoView({ behavior: "smooth" });
+
+      donateRef.current.classList.add("highlight");
+
+      setTimeout(() => {
+        if (donateRef.current) {
+          donateRef.current.classList.remove("highlight");
+        }
+      }, 3000);
+    }
+  };
+
   const [data, setData] = useState({
     intro:
       "Hello everyone, I'm Ivoine! I have some great news and a favor to ask of you.",
@@ -28,7 +42,8 @@ const sponsor = () => {
       "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898310/Deet_IMG_1289_xo1vaq.jpg",
       "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898453/Ivoine_journey_image_cwqbe8.png",
     ],
-    support: "I have an incredible opportunity to be part of Buildspace but I need some help getting there. I had a tough upbringing\nin The Bahamas and this opportunity could change my life. Here's a breakdown of what I'm facing:",
+    support:
+      "I have an incredible opportunity to be part of Buildspace but I need some help getting there. I had a tough upbringing\nin The Bahamas and this opportunity could change my life. Here's a breakdown of what I'm facing:",
     flight: "Plane ticket: $700 - $800",
     rent: "Rent and security deposit: $850/month, security deposit $1,050",
     expenses:
@@ -44,11 +59,24 @@ const sponsor = () => {
   });
   return (
     <div className="overflow-y-auto h-[100vh]">
-      <Link href="/">
-        <button className="flex items-center justify-between sm:mx-10 mt-5 font-mono font-bold text-[22px] hover:bg-gray-200 pl-7 pr-7 rounded-md">
-          Home
-        </button>
-      </Link>
+      <div className="flex items-center justify-between sm:mx-10 mt-5 w-[90%]">
+        <div>
+          <Link href="/">
+            <button className="font-mono font-bold text-[22px] hover:bg-gray-200 pl-7 pr-7 rounded-md">
+              Home
+            </button>
+          </Link>
+        </div>
+
+        <div>
+          <a
+            href="#donate"
+            className="bg-green-500 py-2.5 pl-7 pr-7 rounded-md text-white"
+          >
+            <button onClick={scrollToDonate}>Donate</button>
+          </a>
+        </div>
+      </div>
 
       <div className="space-y-4  sm:px-[220px] px-4 mt-10 text-[16px]">
         <div>{data.intro}</div>
@@ -56,10 +84,7 @@ const sponsor = () => {
 
         <div>
           Recently, I was accepted into{" "}
-          <a
-            href="https://buildspace.so/"
-            className="text-blue-500 underline"
-          >
+          <a href="https://buildspace.so/" className="text-blue-500 underline">
             Buildspace
           </a>
           , a 4-month program where I can build more tech projects, like
@@ -73,20 +98,20 @@ const sponsor = () => {
           opportunities.
         </div>
         <div>
-        <div className="flex items-center gap-4 flex-wrap  sm:justify-start justify-center mt-2">
-          {data.image.map((imageUrl, index) => (
-            <Image
-              key={index}
-              src={imageUrl}
-              alt={`image-${index}`}
-              width={350}
-              height={250}
-            />
-          ))}
+          <div className="flex items-center gap-4 flex-wrap  sm:justify-start justify-center mt-2">
+            {data.image.map((imageUrl, index) => (
+              <Image
+                key={index}
+                src={imageUrl}
+                alt={`image-${index}`}
+                width={350}
+                height={250}
+              />
+            ))}
           </div>
-            <div>
-              <Donations donations={donations} />
-            </div>
+          <div>
+            <Donations donations={donations} />
+          </div>
         </div>
         <div>
           <div className="font-bold">Why I Need Your Support:</div>
@@ -102,13 +127,14 @@ const sponsor = () => {
         </div>
         <div className="font-bold">How You Can Help:</div>
         <div>{data.help}</div>
-        <div>
+        <div id="donate" ref={donateRef}>
           Donations: Every contribution helps, no matter the size. Plus, I’ve
           partnered with{" "}
           <a href="https://hackclub.com" className="text-blue-500 underline">
             Hack Club
           </a>{" "}
-          a 501(c)(3) non-profit, making your donations <span className="font-bold">tax-deductible</span>{" "}
+          a 501(c)(3) non-profit, making your donations{" "}
+          <span className="font-bold">tax-deductible</span>{" "}
           <a
             href="https://hcb.hackclub.com/donations/start/ivoine"
             className="text-blue-500 underline"

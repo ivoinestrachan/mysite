@@ -7,6 +7,10 @@ body{
     overflow-y: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
 body::-webkit-scrollbar {
     display: none;
 }
@@ -20,3 +24,10 @@ body::-webkit-scrollbar {
 .ts {
     background-image: repeating-linear-gradient(to bottom right, #e2b142 0px, #fbe87a 50px, #e2b142 100px);
 }
+
+.highlight {
+    background-color: yellow; 
+    transition: background-color 0.5s ease; 
+    text-decoration: underline;
+  }
+  
