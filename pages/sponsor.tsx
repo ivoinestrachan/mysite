@@ -59,7 +59,7 @@ const sponsor = () => {
   });
   return (
     <div className="overflow-y-auto h-[100vh]">
-      <div className="flex items-center justify-between sm:mx-10 mt-5 w-[90%]">
+      <div className="flex items-center justify-between sm:mx-10 mt-5 w-[95%]">
         <div>
           <Link href="/">
             <button className="font-mono font-bold text-[22px] hover:bg-gray-200 pl-7 pr-7 rounded-md">
