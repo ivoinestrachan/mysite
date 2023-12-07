@@ -39,10 +39,17 @@ const sponsor = () => {
     secintro:
       "I'm an 18-year-old from the Bahamas, where life has been quite an adventure. Raised by my\ngrandmother, I discovered my passion for chess and technology early on by competing in chess\ntournaments in Jamaica and the Bahamas, and exploring game development on Roblox.\nDespite losing my mother at 16 and learning to code using nothing but my smartphone, I've never\ngiven up on my dream to create and build amazing projects.",
 
-    image: [
-      "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898310/Deet_IMG_1289_xo1vaq.jpg",
-      "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898453/Ivoine_journey_image_cwqbe8.png",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898310/Deet_IMG_1289_xo1vaq.jpg",
+        label: "Me at Buildspace S4 graduation day",
+      },
+      {
+        url: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898453/Ivoine_journey_image_cwqbe8.png",
+        label: "Me @ MIT going to a hackathon in vermont",
+      },
     ],
+
     support:
       "I have an incredible opportunity to be part of Buildspace but I need some help getting there. I had a tough upbringing\nin The Bahamas and this opportunity could change my life. For me to participate in Buildspace, I'll need to spend:",
     flight: "Plane ticket: $700 - $800",
@@ -60,7 +67,7 @@ const sponsor = () => {
   });
   return (
     <div className="overflow-y-auto h-[100vh]">
-       <Head>
+      <Head>
         <title>Sponsor Me!!</title>
       </Head>
       <div className="flex items-center justify-between sm:mx-10 mt-5 w-[95%]">
@@ -83,7 +90,9 @@ const sponsor = () => {
       </div>
 
       <div className="space-y-4  sm:px-[220px] px-4 mt-10 text-[16px]">
-      <div className="font-bold text-[24px]">A Chance is Something you Take. An Opportunity is Something You Get</div>
+        <div className="font-bold text-[24px]">
+          A Chance is Something you Take. An Opportunity is Something You Get
+        </div>
         <div>{data.intro}</div>
         <div>{data.secintro}</div>
 
@@ -104,14 +113,16 @@ const sponsor = () => {
         </div>
         <div>
           <div className="flex items-center gap-4 flex-wrap  sm:justify-start justify-center mt-2">
-            {data.image.map((imageUrl, index) => (
-              <Image
-                key={index}
-                src={imageUrl}
-                alt={`image-${index}`}
-                width={350}
-                height={250}
-              />
+            {data.images.map((image, index) => (
+              <div key={index} className="image-container">
+                <Image
+                  src={image.url}
+                  alt={`image-${index}`}
+                  width={350}
+                  height={250}
+                />
+                <span>{image.label}</span>
+              </div>
             ))}
           </div>
           <div>
