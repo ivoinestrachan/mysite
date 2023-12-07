@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Donations from "../components/donation";
+import Head from "next/head";
 
 const sponsor = () => {
   const [donations, setDonations] = useState([]);
@@ -59,6 +60,9 @@ const sponsor = () => {
   });
   return (
     <div className="overflow-y-auto h-[100vh]">
+       <Head>
+        <title>Sponsor Me!!</title>
+      </Head>
       <div className="flex items-center justify-between sm:mx-10 mt-5 w-[95%]">
         <div>
           <Link href="/">
