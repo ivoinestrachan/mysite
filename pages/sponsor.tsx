@@ -57,7 +57,7 @@ const sponsor = () => {
         <div>
           Recently, I was accepted into{" "}
           <a
-            href="https://buildspace.so/sf2"
+            href="https://buildspace.so/"
             className="text-blue-500 underline"
           >
             Buildspace
