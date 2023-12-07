@@ -42,7 +42,7 @@ const sponsor = () => {
     images: [
       {
         url: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898310/Deet_IMG_1289_xo1vaq.jpg",
-        label: "Me at Buildspace S4 graduation day",
+        label: "Me @ Buildspace S4 graduation day",
       },
       {
         url: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1701898453/Ivoine_journey_image_cwqbe8.png",
@@ -58,7 +58,6 @@ const sponsor = () => {
       "Monthly expenses: Including bus/train fares, phone bills ($50/month), and groceries",
 
     help: "Your support would make a huge difference! Here's how you can contribute:",
-    //  donate: "Donations: Every contribution helps, no matter the size. Plus, I’ve partnered with Hack Club a\n501(c)(3) non-profit, making your donations tax-deductible.",
     mono: "In-kind Support: If you prefer, you can also help by donating airline points for the flight, or gift cards for U.S. grocery stores or transit.",
     promise:
       "I will make the most of this opportunity. You can follow my journey and check out my projects on my",
@@ -91,7 +90,7 @@ const sponsor = () => {
 
       <div className="space-y-4  sm:px-[220px] px-4 mt-10 text-[16px]">
         <div className="font-bold text-[24px]">
-          A Chance is Something you Take. An Opportunity is Something You Get
+          A <span className="border-b-2 border-dotted border-black" data-tooltip="take a chance on me">Chance</span> is Something you Take. An Opportunity Something You Get
         </div>
         <div>{data.intro}</div>
         <div>{data.secintro}</div>
