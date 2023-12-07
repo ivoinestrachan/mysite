@@ -83,6 +83,7 @@ const sponsor = () => {
       </div>
 
       <div className="space-y-4  sm:px-[220px] px-4 mt-10 text-[16px]">
+      <div className="font-bold text-[24px]">A Chance is Something you Take. An Opportunity is Something You Get</div>
         <div>{data.intro}</div>
         <div>{data.secintro}</div>
 
