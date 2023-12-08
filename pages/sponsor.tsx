@@ -3,9 +3,19 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Donations from "../components/donation";
 import Head from "next/head";
-
+import santa from "../public/assets/santa.svg"
+import Marquee from "react-fast-marquee";
+import useSound from 'use-sound';
 const sponsor = () => {
   const [donations, setDonations] = useState([]);
+
+  const [play, { stop }] = useSound('/assets/hoho.mp3');
+
+  const toggleAudio = () => {
+    play(); 
+   
+  };
+
 
   useEffect(() => {
     fetch("https://bank.hackclub.com/api/v3/organizations/ivoine/donations")
@@ -174,6 +184,13 @@ const sponsor = () => {
         </div>
         <div className="pb-5">{data.thanks}</div>
       </div>
+      
+      <div className="fixed bottom-0 w-full">
+      <Marquee play={true} speed={60} loop={100} direction="right" >
+        <Image src={santa} alt="santa" width={300} height={300} onClick={toggleAudio} className="cursor-pointer"/>
+        </Marquee>
+      </div>
+     
     </div>
   );
 };
