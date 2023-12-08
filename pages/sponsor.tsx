@@ -105,7 +105,7 @@ const sponsor = () => {
           <a href="https://sinerider.com" className="text-blue-500 underline">
             Sinerider
           </a>{" "}
-          and turning a dryer into a cotton candy machine! This program is a
+          and <a href="https://github.com/ivoinestrachan/cotton-candy-dryer#readme" className="text-blue-500 underline">turning a dryer into a cotton candy machine!</a> This program is a
           stepping stone towards a brighter future in tech - and many have told
           me that proving myself here could open doors to exciting job
           opportunities.
