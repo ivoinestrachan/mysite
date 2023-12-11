@@ -3,19 +3,17 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Donations from "../components/donation";
 import Head from "next/head";
-import santa from "../public/assets/santa.svg"
+import santa from "../public/assets/santa.svg";
 import Marquee from "react-fast-marquee";
-import useSound from 'use-sound';
+import useSound from "use-sound";
 const sponsor = () => {
   const [donations, setDonations] = useState([]);
 
-  const [play, { stop }] = useSound('/assets/hoho.mp3');
+  const [play, { stop }] = useSound("/assets/hoho.mp3");
 
   const toggleAudio = () => {
-    play(); 
-   
+    play();
   };
-
 
   useEffect(() => {
     fetch("https://bank.hackclub.com/api/v3/organizations/ivoine/donations")
@@ -46,8 +44,8 @@ const sponsor = () => {
   const [data, setData] = useState({
     intro:
       "Hello everyone, I'm Ivoine! I have some great news and a favor to ask of you.",
-    secintro:
-      "I'm an 18-year-old from the Bahamas, where life has been quite an adventure. Raised by my\ngrandmother, I discovered my passion for chess and technology early on by competing in chess\ntournaments in Jamaica and the Bahamas, and exploring game development on Roblox.\nDespite losing my mother at 16 and learning to code using nothing but my smartphone, I've never\ngiven up on my dream to create and build amazing projects.",
+    //  secintro:
+    //   "I'm an 18-year-old from the Bahamas, where life has been quite an adventure. Raised by my\ngrandmother, I discovered my passion for chess and technology early on by competing in chess\ntournaments in Jamaica and the Bahamas, and exploring game development on Roblox.\nDespite losing my mother at 16 and learning to code using nothing but my smartphone, I've never\ngiven up on my dream to create and build amazing projects.",
 
     images: [
       {
@@ -100,10 +98,42 @@ const sponsor = () => {
 
       <div className="space-y-4  sm:px-[220px] px-4 mt-10 text-[16px]">
         <div className="font-bold text-[24px]">
-          A <span className="border-b-2 border-dotted border-black" data-tooltip="take a chance on me">Chance</span> is Something you Take. An Opportunity Something You Get
+          A{" "}
+          <span
+            className="border-b-2 border-dotted border-black"
+            data-tooltip="take a chance on me"
+          >
+            Chance
+          </span>{" "}
+          is Something you Take. An Opportunity Something You Get
         </div>
         <div>{data.intro}</div>
-        <div>{data.secintro}</div>
+        <div>
+          I'm an 18-year-old from the Bahamas, where life has been quite an
+          adventure. Raised by my grandmother, I discovered my passion for chess
+          and technology early on by{" "}
+          <a href="http://www.bahamaschessfederation.org/carifta-2017.html"
+           className="text-blue-500 underline"
+          >
+            competing in chess tournaments in Jamaica
+          </a>{" "}
+          and the Bahamas, and exploring{" "}
+          <a href="https://www.youtube.com/watch?v=zVa_q7CwKRg"
+           className="text-blue-500 underline"
+          >
+            game development
+          </a>{" "}
+          on Roblox. Despite losing my mother at 16 and learning to code using
+          nothing but my{" "}
+          <a
+            href="https://www.youtube.com/watch?v=6iqCR_ndnVk"
+className="text-blue-500 underline"
+          >
+            smartphone
+          </a>
+          , I've never given up on my dream to create and build amazing
+          projects.
+        </div>
 
         <div>
           Recently, I was accepted into{" "}
@@ -115,10 +145,16 @@ const sponsor = () => {
           <a href="https://sinerider.com" className="text-blue-500 underline">
             Sinerider
           </a>{" "}
-          and <a href="https://github.com/ivoinestrachan/cotton-candy-dryer#readme" className="text-blue-500 underline">turning a dryer into a cotton candy machine!</a> This program is a
-          stepping stone towards a brighter future in tech - and many have told
-          me that proving myself here could open doors to exciting job
-          opportunities.
+          and{" "}
+          <a
+            href="https://github.com/ivoinestrachan/cotton-candy-dryer#readme"
+            className="text-blue-500 underline"
+          >
+            turning a dryer into a cotton candy machine!
+          </a>{" "}
+          This program is a stepping stone towards a brighter future in tech -
+          and many have told me that proving myself here could open doors to
+          exciting job opportunities.
         </div>
         <div>
           <div className="flex items-center gap-4 flex-wrap  sm:justify-start justify-center mt-2">
@@ -184,13 +220,19 @@ const sponsor = () => {
         </div>
         <div className="pb-5">{data.thanks}</div>
       </div>
-      
+
       <div className="fixed bottom-0 w-full">
-      <Marquee play={true} speed={60} loop={100} direction="right" >
-        <Image src={santa} alt="santa" width={300} height={300} onClick={toggleAudio} className="cursor-pointer"/>
+        <Marquee play={true} speed={60} loop={100} direction="right">
+          <Image
+            src={santa}
+            alt="santa"
+            width={300}
+            height={300}
+            onClick={toggleAudio}
+            className="cursor-pointer"
+          />
         </Marquee>
       </div>
-     
     </div>
   );
 };
