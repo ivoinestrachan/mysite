@@ -112,14 +112,16 @@ const sponsor = () => {
           I'm an 18-year-old from the Bahamas, where life has been quite an
           adventure. Raised by my grandmother, I discovered my passion for chess
           and technology early on by{" "}
-          <a href="http://www.bahamaschessfederation.org/carifta-2017.html"
-           className="text-blue-500 underline"
+          <a
+            href="http://www.bahamaschessfederation.org/carifta-2017.html"
+            className="text-blue-500 underline"
           >
             competing in chess tournaments in Jamaica
           </a>{" "}
           and the Bahamas, and exploring{" "}
-          <a href="https://www.youtube.com/watch?v=zVa_q7CwKRg"
-           className="text-blue-500 underline"
+          <a
+            href="https://www.youtube.com/watch?v=zVa_q7CwKRg"
+            className="text-blue-500 underline"
           >
             game development
           </a>{" "}
@@ -127,7 +129,7 @@ const sponsor = () => {
           nothing but my{" "}
           <a
             href="https://www.youtube.com/watch?v=6iqCR_ndnVk"
-className="text-blue-500 underline"
+            className="text-blue-500 underline"
           >
             smartphone
           </a>
@@ -219,19 +221,6 @@ className="text-blue-500 underline"
           .
         </div>
         <div className="pb-5">{data.thanks}</div>
-      </div>
-
-      <div className="fixed bottom-0 w-full">
-        <Marquee play={true} speed={60} loop={100} direction="right">
-          <Image
-            src={santa}
-            alt="santa"
-            width={300}
-            height={300}
-            onClick={toggleAudio}
-            className="cursor-pointer"
-          />
-        </Marquee>
       </div>
     </div>
   );
