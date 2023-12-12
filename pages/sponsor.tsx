@@ -183,7 +183,7 @@ const sponsor = () => {
 
         <div>
           <ul>
-            <li>{data.flight}</li>
+            <li className="line-through">{data.flight}</li>
             <li>{data.rent}</li>
             <li>{data.expenses}</li>
           </ul>
