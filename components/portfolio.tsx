@@ -9,7 +9,7 @@ const Portfolio = () => {
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697059653/IMG_7261_rbog4t.jpg",
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697059664/IMG_7266_eyprve.jpg",
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697059658/IMG_7259_idd6tr.jpg",
-          "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697119217/IMG_3306_from_Hack_Club_via_Slack_ui6irr.jpg"
+          "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697119217/IMG_3306_from_Hack_Club_via_Slack_ui6irr.jpg",
         ],
         title: "Flying to San Francisco",
         desc: "I flew to san francisco with the hope of getting an internship and meeting wonderful new people and building cool project i was able to get a referral at google.",
@@ -31,8 +31,8 @@ const Portfolio = () => {
             "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
           width: 370,
           height: 315,
-          allowfullscreen: true
-        }
+          allowfullscreen: true,
+        },
       },
       {
         date: "Aug 10th 2023",
@@ -82,6 +82,24 @@ const Portfolio = () => {
         {journeyData.journey.map((item, index) => (
           <div key={index}>
             <p className="sm:text-gray-300 mt-5">{item.date}</p>
+            <p className="sm:text-white mt-5 font-bold text-[24px]">
+              {item.title}
+            </p>
+            <p className="sm:text-white sm:w-[500px] w-[300px]">{item.desc}</p>
+
+            <a href={item.link}>
+              <div
+                className={`border rounded-md pl-3 py-3 sm:w-[50%] ${
+                  item.github ? "border-gray-400" : "border-none"
+                }`}
+              >
+                {item.github && (
+                  <p className="text-blue-500 font-bold">{item.github}</p>
+                )}
+                {item.lang && <p className="sm:text-white">{item.lang}</p>}
+                <p className="sm:text-white">{item.githubbio}</p>
+              </div>
+            </a>
             <div className="flex items-center gap-4 flex-wrap  sm:justify-start justify-center mt-2">
               {item.image &&
                 //@ts-ignore
@@ -97,20 +115,19 @@ const Portfolio = () => {
                   </div>
                 ))}
 
-{item.youtubeEmbed && (
-  <div key={`youtube-${index}`} className="mt-2">
-    <iframe
-      width={item.youtubeEmbed.width}
-      height={item.youtubeEmbed.height}
-      src={item.youtubeEmbed.src}
-      title={item.youtubeEmbed.title}
-      allow={item.youtubeEmbed.allow}
-      frameBorder="0"
-      allowFullScreen={item.youtubeEmbed.allowfullscreen}
-    />
-  </div>
-)}
-
+              {item.youtubeEmbed && (
+                <div key={`youtube-${index}`} className="mt-2">
+                  <iframe
+                    width={item.youtubeEmbed.width}
+                    height={item.youtubeEmbed.height}
+                    src={item.youtubeEmbed.src}
+                    title={item.youtubeEmbed.title}
+                    allow={item.youtubeEmbed.allow}
+                    frameBorder="0"
+                    allowFullScreen={item.youtubeEmbed.allowfullscreen}
+                  />
+                </div>
+              )}
             </div>
 
             {item.video && (
@@ -120,21 +137,6 @@ const Portfolio = () => {
                 </video>
               </div>
             )}
-            <p className="sm:text-white mt-5 font-bold text-[24px]">{item.title}</p>
-            <a href={item.link}>
-              <div
-                className={`border rounded-md pl-3 py-3 sm:w-[50%] ${
-                  item.github ? "border-gray-400" : "border-none"
-                }`}
-              >
-                {item.github && (
-                  <p className="text-blue-500 font-bold">{item.github}</p>
-                )}
-                {item.lang && <p className="sm:text-white">{item.lang}</p>}
-                <p className="sm:text-white">{item.githubbio}</p>
-              </div>
-            </a>
-            <p className="sm:text-white sm:w-[500px] w-[300px]">{item.desc}</p>
           </div>
         ))}
       </div>

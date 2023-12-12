@@ -31,7 +31,7 @@ const Home: NextPage = () => {
 
         <div className="flex gap-3 font-mono text-[18px] items-center">
           <a href="https://github.com/ivoinestrachan">
-            <p className="underline">Github</p>
+            <p className="underline">GitHub</p>
           </a>
           <span>~</span>
           <a href="https://scrapbook.hackclub.com/sike">
@@ -42,10 +42,13 @@ const Home: NextPage = () => {
             <p className="underline">Instagram</p>
           </a>
         </div>
+        <a href="/assets/Resume.pdf">
+            <p className="underline font-mono text-[18px] items-center">Resume</p>
+          </a>
         <div className="font-mono mt-5 text-lg">About Me</div>
 
         <div className="font-mono mt-5 sm:hover:bg-gray-100 sm:py-2 sm:pr-3 sm:pl-3 rounded-md cursor-pointer">
-          I am a high school dropout with a passion for technology and making a
+          I am a high school dropout with a obsession for technology and making a
           difference.I am currently working on{" "}
           <span className="underline">
             <a href="https://sinerider.com/">Sinerider</a>
@@ -62,14 +65,14 @@ const Home: NextPage = () => {
 
         <div className="mt-5 font-mono text-lg">
           <div>
-           Interesting facts about me
+           Interesting facts about me:
           </div>
           <div>
             <li>18 years old</li>
-            <li>I live in The Bahamas</li>
-            <li>built a bomb at a hackathon</li>
-            <li>Travel 2,000 miles to San Francisco for 4months</li>
-            <li>played in a national CARIFTA chess tournament</li>
+            <li>Live in The Bahamas</li>
+            <li>Built bomb at a <a href="https://outernet.hackclub.com" className="text-blue-500 underline">Hackathon</a></li>
+            <li>Traveled 2,000 miles to San Francisco for 4months</li>
+            <li>Played in a national CARIFTA chess tournament</li>
           </div>
         </div>
         <div>

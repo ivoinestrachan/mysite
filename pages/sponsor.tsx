@@ -70,7 +70,7 @@ const sponsor = () => {
     promise:
       "I will make the most of this opportunity. You can follow my journey and check out my projects on my",
     thanks:
-      "Your support means the world to me. It's not just about financial assistance; it's about believing\nin someone's dream and being a part of their journey. Thank you for considering my request and\nfor any support you can offer.",
+      "Your support means the world to me. It's not just about financial assistance, it's about believing\nin someone's dream and being a part of their journey. Thank you for considering my request and\nfor any support you can offer.",
   });
   return (
     <div className="overflow-y-auto h-[100vh]">
@@ -110,7 +110,7 @@ const sponsor = () => {
         <div>{data.intro}</div>
         <div>
           I'm an 18-year-old from the Bahamas, where life has been quite an
-          adventure. Raised by my grandmother, I discovered my passion for chess
+          adventure. Raised by my grandmother, I discovered my obsession for chess
           and technology early on by{" "}
           <a
             href="http://www.bahamaschessfederation.org/carifta-2017.html"
@@ -134,7 +134,7 @@ const sponsor = () => {
             smartphone
           </a>
           , I've never given up on my dream to create and build amazing
-          projects.
+          projects. Growing up without electricity, Wi-Fi, and running water, I faced significant disadvantages, yet these challenges only fueled my determination to succeed against all odds.
         </div>
 
         <div>
