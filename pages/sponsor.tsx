@@ -3,8 +3,6 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Donations from "../components/donation";
 import Head from "next/head";
-import santa from "../public/assets/santa.svg";
-import Marquee from "react-fast-marquee";
 import useSound from "use-sound";
 const sponsor = () => {
   const [donations, setDonations] = useState([]);
@@ -19,8 +17,8 @@ const sponsor = () => {
     fetch("https://bank.hackclub.com/api/v3/organizations/ivoine/donations")
       .then((response) => response.json())
       .then((data) => {
-        const lastTwoDonations = data.slice(0, 2);
-        setDonations(lastTwoDonations);
+        const lastThreeDonations = data.slice(0, 3);
+        setDonations(lastThreeDonations);
       })
       .catch((error) => console.error("Error fetching donations:", error));
   }, []);
@@ -173,7 +171,7 @@ const sponsor = () => {
             ))}
           </div>
           <div>
-            <Donations donations={donations} />
+            <Donations initialDonations={donations} />
           </div>
         </div>
         <div>

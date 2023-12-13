@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import { useState } from "react";
 
 interface Donor {
   name: string;
@@ -10,61 +11,68 @@ interface Donation {
   amount_cents: number;
 }
 
-interface Props {
-  donations: Donation[];
+interface DonationsProps {
+  initialDonations: Donation[];
 }
 
-const Donations = (props: Props) => {
-  const url = "https://bank.hackclub.com/api/v3/organizations/ivoine/donations";
-  const { data, error } = useSWR(url);
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-  const getTotalAmount = (donations: Donation[]) => {
-    return (
-      donations.reduce((total, donation) => total + donation.amount_cents, 0) /
-      100
-    );
-  };
-  const donationsToShow = data || props.donations;
-  const totalAmount = getTotalAmount(donationsToShow);
+const Donations = ({ initialDonations }: DonationsProps) => {
+  const { data, error } = useSWR<Donation[]>(
+    "https://bank.hackclub.com/api/v3/organizations/ivoine/donations",
+    fetcher
+  );
+  const [showOverlay, setShowOverlay] = useState(false);
 
   if (error) return <div>Error loading donations.</div>;
-  if (!donationsToShow) return <div>Loading...</div>;
+  if (!data) return <div>Loading...</div>;
 
   return (
     <div className="mt-2">
-    {/*  <div><span className="font-bold">Goal: </span>${totalAmount.toFixed(2)} / $5,000</div> */}
-      {donationsToShow.map((donation: Donation) => (
-        <div key={donation.id}>
-          <div    className={`flex text-center gap-2 ${donation.amount_cents > 24000 ? 'ts' : 'bg-green-400'} sm:w-[50%] border-b py-2 pl-2`}>
-            <span className="text-[18px] uppercase">
-              DONATION FROM {donation.donor.name}
-            </span>
-            <span className="text-[18px]">
-              ${donation.amount_cents / 100}.00
-            </span>
-          </div>
+      {data.slice(0, 3).map((donation: Donation) => (
+        <div
+          key={donation.id}
+          className={`flex text-center gap-2 ${
+            donation.amount_cents > 24000 ? "ts" : "bg-green-400"
+          } sm:w-[50%] border-b py-2 pl-2`}
+        >
+          <span className="text-[18px] uppercase">
+            DONATION FROM {donation.donor.name}
+          </span>
+          <span className="text-[18px]">${donation.amount_cents / 100}.00</span>
         </div>
       ))}
+      <button className="text-[18px]" onClick={() => setShowOverlay(true)}>
+        See All
+      </button>
+
+      {showOverlay && (
+        <div className="overlay" onClick={() => setShowOverlay(false)}>
+          {data.slice(0, 6).map((donation: Donation) => (
+            <div
+              key={donation.id}
+              className={`flex text-center gap-2 ${
+                donation.amount_cents > 24000 ? "ts" : "bg-green-400"
+              } sm:w-[50%] w-full border-b py-2 pl-2`}
+            >
+              <span className="text-[18px] uppercase">
+                DONATION FROM {donation.donor.name}
+              </span>
+              <span className="text-[18px]">
+                ${donation.amount_cents / 100}.00
+              </span>
+            </div>
+          ))}
+          <button
+            className="text-white text-[20px]"
+            onClick={() => setShowOverlay(false)}
+          >
+            Close
+          </button>
+        </div>
+      )}
     </div>
   );
-};
-
-export const getServerSideProps = async () => {
-  const url = "https://bank.hackclub.com/api/v3/organizations/ivoine/donations";
-
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    return {
-      props: { donations: data },
-    };
-  } catch (error) {
-    console.error("Failed to fetch donations:", error);
-    return {
-      props: { donations: [] },
-    };
-  }
 };
 
 export default Donations;
