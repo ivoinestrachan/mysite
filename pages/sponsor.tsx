@@ -59,7 +59,7 @@ const sponsor = () => {
     support:
       "I have an incredible opportunity to be part of Buildspace but I need some help getting there. I had a tough upbringing\nin The Bahamas and this opportunity could change my life. For me to participate in Buildspace, I'll need to spend:",
     flight: "Plane ticket: $700 - $800",
-    rent: "Rent and security deposit: $850/month, security deposit $950",
+    rent: "Rent and security deposit: $850/month,",
     expenses:
       "Monthly expenses: Including bus/train fares, phone bills ($50/month), and groceries",
 
@@ -182,7 +182,7 @@ const sponsor = () => {
         <div>
           <ul>
             <li className="line-through">{data.flight}</li>
-            <li>{data.rent}</li>
+            <li>{data.rent} <span className="line-through">security deposit $950</span></li>
             <li>{data.expenses}</li>
           </ul>
         </div>
