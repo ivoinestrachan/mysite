@@ -42,9 +42,7 @@ const Home: NextPage = () => {
             <p className="underline">Instagram</p>
           </a>
         </div>
-        <a href="/assets/Resume.pdf">
-            <p className="underline font-mono text-[18px] items-center">Resume</p>
-          </a>
+       
         <div className="font-mono mt-5 text-lg">About Me</div>
 
         <div className="font-mono  sm:hover:bg-gray-100 sm:py-2 sm:pr-3 sm:pl-3 rounded-md cursor-pointer">
