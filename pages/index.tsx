@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div>
-        <iframe className="mt-5" src="https://open.spotify.com/embed/track/7yq4Qj7cqayVTp3FF9CWbm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe className="mt-5" src="https://open.spotify.com/embed/track/0aJrYfARfCKzv6gXjhs4SZ?utm_source=generator=0" width="100%" height="152" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </main>
      </div>
