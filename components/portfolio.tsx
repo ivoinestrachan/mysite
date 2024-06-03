@@ -35,6 +35,7 @@ const Portfolio = () => {
         image: [
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1717354310/Photo_Jan_2_2024_cys0ac.jpg",
           "https://res.cloudinary.com/dxmrcocqb/image/upload/v1717354657/IMG_8095_vqreyj.webp",
+          "https://res.cloudinary.com/dxmrcocqb/image/upload/v1717425543/A3C85B2C-0BEB-4880-9BAC-7AA6831F29A6_ukffh4.jpg"
         ],
         title: "Sleeping in the airport",
         desc: "Moving to San Francisco for the year, moving into my apartment with three random people I never met",
