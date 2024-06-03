@@ -4,7 +4,14 @@ const Portfolio = () => {
   const journeyData = {
     journey: [
       {
-        date: "Some self driving day",
+      date: "Febuary 13 2024",
+      image: [
+        "https://res.cloudinary.com/dxmrcocqb/image/upload/v1717421217/Photo_Jan_19_2024_niucsj.jpg",
+      ],
+      title: "Tazer Me Elmo",
+      desc: "built this so when my roommates walk near the elmo they would get shocked really end up being funny",
+    },
+      {
         video: [
           "https://res.cloudinary.com/dxmrcocqb/video/upload/v1717357048/IMG_8775_irxq0n.mov",
           "https://res.cloudinary.com/dxmrcocqb/video/upload/v1717357259/IMG_8777_qovcfh.mov",
@@ -167,11 +174,7 @@ const Portfolio = () => {
                 </div>
               ))
             ) : (
-              <div key={`video-${index}`} className="mt-2">
-                <video controls width={400} height={400}>
-                  <source src={item.video} type="video/mp4" />
-                </video>
-              </div>
+             <div></div>
             )}
           </div>
         ))}
