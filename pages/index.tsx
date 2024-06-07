@@ -38,8 +38,8 @@ const Home: NextPage = () => {
             <p className="underline">Scrapbook</p>
           </a>
           <span>~</span>
-          <a href="https://www.instagram.com/ivoine_tech/">
-            <p className="underline">Instagram</p>
+          <a href="https://x.com/ivoinetech">
+            <p className="underline">Twitter</p>
           </a>
         </div>
        
