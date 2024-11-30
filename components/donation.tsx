@@ -45,7 +45,7 @@ const Donations = ({ initialDonations }: DonationsProps) => {
 
       {showOverlay && (
         <div className="overlay" onClick={() => setShowOverlay(false)}>
-          {data.slice(0, 5).map((donation: Donation) => (
+          {data.slice(0, 6).map((donation: Donation) => (
             <div
               key={donation.id}
               className={`flex text-center gap-2 ${
