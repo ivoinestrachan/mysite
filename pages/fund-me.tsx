@@ -3,7 +3,7 @@ import placeholder from "../assets/group.svg";
 import { useEffect, useRef, useState } from "react";
 import Donations from "../components/donation";
 import Raised from "../components/Raised";
-import Donated from "../components/donated";
+import Donated from "../components/Donated";
 import Story from "../components/Story";
 
 interface Donor {
