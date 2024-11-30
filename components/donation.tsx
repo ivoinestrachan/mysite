@@ -29,17 +29,14 @@ const Donations = ({ initialDonations }: DonationsProps) => {
 
   return (
     <div className="mt-2">
-      {data.slice(0, 3).map((donation: Donation) => (
+      {data.slice(0, 2).map((donation: Donation) => (
         <div
           key={donation.id}
-          className={`flex text-center gap-2 ${
-            donation.amount_cents > 24000 ? "ts" : "bg-green-400"
-          } sm:w-[50%] border-b py-2 pl-2`}
         >
-          <span className="text-[18px] uppercase">
-            DONATION FROM {donation.donor.name}
-          </span>
-          <span className="text-[18px]">${donation.amount_cents / 100}.00</span>
+          <div className="text-[18px] uppercase">
+           {donation.donor.name}
+          </div>
+          <div className="text-[18px] mb-2">${donation.amount_cents / 100}.00</div>
         </div>
       ))}
       <button className="text-[18px]" onClick={() => setShowOverlay(true)}>
@@ -48,7 +45,7 @@ const Donations = ({ initialDonations }: DonationsProps) => {
 
       {showOverlay && (
         <div className="overlay" onClick={() => setShowOverlay(false)}>
-          {data.slice(0, 7).map((donation: Donation) => (
+          {data.slice(0, 2).map((donation: Donation) => (
             <div
               key={donation.id}
               className={`flex text-center gap-2 ${

@@ -2,128 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    overflow-x: hidden;
-    overflow-y: hidden;
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-  
-body::-webkit-scrollbar {
-    display: none;
+  scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 900px){
- body{
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
     overflow-y: auto;
- }
+  }
 }
 
 .ts {
-    background-image: repeating-linear-gradient(to bottom right, #e2b142 0px, #fbe87a 50px, #e2b142 100px);
+  background-image: repeating-linear-gradient(
+    to bottom right,
+    #e2b142 0px,
+    #fbe87a 50px,
+    #e2b142 100px
+  );
 }
 
 .highlight {
-    background-color: yellow; 
-    transition: background-color 0.5s ease; 
-    text-decoration: underline;
-  }
-  
-  [data-tooltip] {
-    position: relative;
-    cursor: pointer;
-  }
-  
-  [data-tooltip]:before,
-  [data-tooltip]:after {
-    line-height: 1;
-    font-size: .9em;
-    pointer-events: none;
-    position: absolute;
-    box-sizing: border-box;
-    display: none;
-    opacity: 0;
-  }
-  
-  [data-tooltip]:before {
-    content: "";
-    border: 5px solid transparent;
-    z-index: 100;
-  }
-  
-  [data-tooltip]:after {
-    content: attr(data-tooltip);
-    text-align: center;
-    min-width: 3em;
-    max-width: 21em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 4px 12px;
-    border-radius: 5px;
-    background: black;
-    color: #FFFFFF;
-    z-index: 99;
-    
-  }
-  
-  [data-tooltip]:hover:before,
-  [data-tooltip]:hover:after {
-    display: block;
-    opacity: 1;
-  }
+  background-color: yellow;
+  transition: background-color 0.5s ease;
+  text-decoration: underline;
+}
 
-  
-  [data-tooltip]:not([data-flow])::after,
-  [data-tooltip][data-flow="top"]::after {
-    bottom: calc(100% + 5px);
-  }
-  
-  [data-tooltip]:not([data-flow])::before, [tooltip]:not([data-flow])::after,
-  [data-tooltip][data-flow="top"]::before,
-  [data-tooltip][data-flow="top"]::after {
-    left: 50%;
-    -webkit-transform: translate(-50%, -4px);
-    transform: translate(-50%, -4px);
-  }
-  
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
 
-  
-  [data-tooltip][data-flow="bottom"]::after {
-    top: calc(100% + 5px);
-  }
-  
-  [data-tooltip][data-flow="bottom"]::before, [data-tooltip][data-flow="bottom"]::after {
-    left: 50%;
-    -webkit-transform: translate(-50%, 8px);
-    transform: translate(-50%, 8px);
-  }
-  
+[data-tooltip]:before,
+[data-tooltip]:after {
+  line-height: 1;
+  font-size: 0.9em;
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  display: none;
+  opacity: 0;
+}
 
-  
-  [data-tooltip][data-flow="left"]::after {
-    top: 50%;
-    right: calc(100% + 5px);
-    -webkit-transform: translate(-8px, -50%);
-    transform: translate(-8px, -50%);
-  }
-  
+[data-tooltip]:before {
+  content: "";
+  border: 5px solid transparent;
+  z-index: 100;
+}
 
- 
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    overflow-y: auto;
-    z-index: 1000; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+[data-tooltip]:after {
+  content: attr(data-tooltip);
+  text-align: center;
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 12px;
+  border-radius: 5px;
+  background: black;
+  color: #ffffff;
+  z-index: 99;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  display: block;
+  opacity: 1;
+}
+
+[data-tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow="top"]::after {
+  bottom: calc(100% + 5px);
+}
+
+[data-tooltip]:not([data-flow])::before,
+[tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow="top"]::before,
+[data-tooltip][data-flow="top"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, -4px);
+  transform: translate(-50%, -4px);
+}
+
+[data-tooltip][data-flow="bottom"]::after {
+  top: calc(100% + 5px);
+}
+
+[data-tooltip][data-flow="bottom"]::before,
+[data-tooltip][data-flow="bottom"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, 8px);
+  transform: translate(-50%, 8px);
+}
+
+[data-tooltip][data-flow="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  -webkit-transform: translate(-8px, -50%);
+  transform: translate(-8px, -50%);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

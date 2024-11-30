@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import Google from "../public/assets/pfp.jpeg";
+import Google from "../assets/pfp.jpeg"
 import Portfolio from "../components/portfolio";
 
 const Home: NextPage = () => {
