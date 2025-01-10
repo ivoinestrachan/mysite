@@ -27,7 +27,7 @@ const fund = () => {
       document.body.style.overflowY = "hidden";
     };
   }, []);
-  
+
   const [donations, setDonations] = useState<Donation[]>([]);
   const [copied, setCopied] = useState(false);
 
@@ -35,7 +35,7 @@ const fund = () => {
     fetch("https://bank.hackclub.com/api/v3/organizations/ivoine/donations")
       .then((response) => response.json())
       .then((data) => {
-        const lastThreeDonations = data.slice(0, 15);
+        const lastThreeDonations = data.slice(0, 16);
         setDonations(lastThreeDonations);
       })
       .catch((error) => console.error("Error fetching donations:", error));
@@ -67,8 +67,8 @@ const fund = () => {
   const handleShareClick = () => {
     navigator.clipboard.writeText("https://hcb.hackclub.com/donations/start/ivoine")
       .then(() => {
-        setCopied(true); 
-        setTimeout(() => setCopied(false), 2000); 
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
       })
       .catch((err) => console.error("Error copying to clipboard", err));
   };
@@ -85,7 +85,7 @@ const fund = () => {
             src={placeholder}
             alt=""
             className="border rounded-md border-black shadow-md sm:w-[700px] "
-          
+
           />
 
           <Story />
@@ -96,8 +96,8 @@ const fund = () => {
           <Donated numberOfDonations={numberOfDonations} />
 
           <div className="text-center mt-10">
-          <button
-              onClick={handleShareClick} 
+            <button
+              onClick={handleShareClick}
               className="font-bold text-[24px] py-2 pl-[128px] pr-[128px] text-white bg-green-500 rounded-xl"
             >
               {copied ? "Copied!" : "Share"}
@@ -106,9 +106,9 @@ const fund = () => {
 
           <div className="text-center mt-4">
             <a href="https://hcb.hackclub.com/donations/start/ivoine">
-            <button className="font-bold text-[24px] py-2 pl-[92px] pr-[92px] text-white bg-green-500 rounded-xl">
-              Donate now
-            </button>
+              <button className="font-bold text-[24px] py-2 pl-[92px] pr-[92px] text-white bg-green-500 rounded-xl">
+                Donate now
+              </button>
             </a>
           </div>
 
