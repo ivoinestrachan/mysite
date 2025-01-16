@@ -35,7 +35,7 @@ const fund = () => {
     fetch("https://bank.hackclub.com/api/v3/organizations/ivoine/donations")
       .then((response) => response.json())
       .then((data) => {
-        const lastThreeDonations = data.slice(0, 16);
+        const lastThreeDonations = data.slice(0, 19);
         setDonations(lastThreeDonations);
       })
       .catch((error) => console.error("Error fetching donations:", error));
