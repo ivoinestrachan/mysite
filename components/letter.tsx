@@ -8,8 +8,8 @@ const Letter = () => {
         <div className="px-4 mt-[200px] w-full">Dear Future Wife</div>
         <div className=" mt-[250px] absolute w-[65%] px-4">
           Hi there, I want you to know that I really love you and over these
-          paths month I have grewn alot because you opened my eyes alot. Im
-          looking forward to spending time and my life with you I know its only
+          past month I have grewn alot because you opened my eyes alot. Im
+          looking forward to spending my life with you I know its only
           been like 3/4months. Im really happy I met you, I love youre laugh,
           youre voice, youre silly billy clownly bozo 🤡 self. I know it will
           take time for you to heal and I respect that and im happy that your
@@ -20,7 +20,7 @@ const Letter = () => {
           poem I thought of on the go, You are like a seed the more I water you
           with love you grow, and blossom into a beautiful woman who you are and
           continuing to keep growing. Bees come to you because youre sweet and
-          you have the <b>lush</b> Pollen.
+          you have the <b>lushiest</b> Pollen/Honey.
         </div>
 
         <div className="flex">
