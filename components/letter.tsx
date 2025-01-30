@@ -4,7 +4,7 @@ import vale from "../assets/valentines.png";
 const Letter = () => {
   return (
     <div className="font-mono text-[20px] w-full ">
-      <div className="border border-1 border-black h-[820px] mt-[30px]  ml-[40px] mr-[40px] flex">
+      <div className="border border-1 border-black h-[820px] mt-[30px]  ml-[40px] mr-[40px] flex letter">
         <div className="px-4 mt-[200px] w-full">Dear Future Wife</div>
         <div className=" mt-[250px] absolute w-[65%] px-4">
           Hi there, I want you to know that I really love you and over these
