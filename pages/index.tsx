@@ -66,7 +66,7 @@ const Home: NextPage = () => {
            Interesting facts about me:
           </div>
           <div>
-            <li>19 years old</li>
+            <li>20 years old</li>
             <li>Live in The Bahamas</li>
            {/* <li>Built bomb at a <a href="https://outernet.hackclub.com" className="text-blue-500 underline">Hackathon</a></li> */}
             <li>Traveled 2,000 miles to San Francisco for 4months</li>
