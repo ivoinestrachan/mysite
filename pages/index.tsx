@@ -2,86 +2,130 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import Google from "../assets/pfp.jpeg"
+import Google from "../assets/pfp.jpg"
+import Merchants from "../assets/merchants.PNG"
 import Portfolio from "../components/portfolio";
 
 const Home: NextPage = () => {
- 
+  const [lightbox, setLightbox] = useState(false);
 
   return (
-    <div className="sm:flex">
-      <div>
-    <div className="sm:w-[650px]">
+    <div className="max-w-4xl mx-auto">
       <Head>
         <title>Ivoine Strachan</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="items-center justify-center m-auto w-[100%] md:px-10 px-5 mt-5">
-        <Image
-          src={Google}
-          alt="ivoine"
-          height={80}
-          width={150}
-          className="cover rounded-full mb-[16px] ml-auto mr-auto md:m-0"
-        />
-        <div className="font-mono font-extrabold text-[36px]">
-          Ivoine Strachan
-        </div>
-
-        <div className="flex gap-3 font-mono text-[18px] items-center">
-          <a href="https://github.com/ivoinestrachan">
-            <p className="underline">GitHub</p>
-          </a>
-          <span>~</span>
-          <a href="https://scrapbook.hackclub.com/sike">
-            <p className="underline">Scrapbook</p>
-          </a>
-          <span>~</span>
-          <a href="https://x.com/ivoinetech">
-            <p className="underline">Twitter</p>
-          </a>
-        </div>
-       
-        <div className="font-mono mt-5 text-lg">About Me</div>
-
-        <div className="font-mono  sm:hover:bg-gray-100 sm:py-2 sm:pr-3 sm:pl-3 rounded-md cursor-pointer">
-          I am a high school dropout with a obsession for technology and making a
-          difference.I am currently working on{" "}
-          <span className="underline">
-            <a href="https://sinerider.com/">Sinerider</a>
-          </span>{" "}
-           an {}
-          <span className="underline">
-            <a href="https://github.com/hackclub/sinerider">open-source</a>
-          </span>{" "}
-          game about love and graphing I am committed to learning
-          and growing, and I believe that education is not limited to the
-          classroom. Join me on this journey and let's build a better future
-          together.
-        </div>
-
-        <div className="mt-5 font-mono text-lg">
+      <main className="w-full px-5 md:px-16 mt-8 mb-20">
+        {/* Header: name left, image right */}
+        <div className="flex items-start justify-between mb-2">
           <div>
-           Interesting facts about me:
+            <div className="font-mono font-bold text-[24px] mb-1">
+              Ivoine Strachan
+            </div>
+            <div className="flex gap-4 font-mono text-[13px]">
+              <a href="https://github.com/ivoinestrachan" className="text-gray-500 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://x.com/ivoinetech" className="text-gray-500 hover:underline" target="_blank" rel="noopener noreferrer">Twitter</a>
+              <a href="https://www.linkedin.com/in/ivoine/" className="text-gray-500 hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
           </div>
-          <div>
-            <li>20 years old</li>
-            <li>Live in The Bahamas</li>
-           {/* <li>Built bomb at a <a href="https://outernet.hackclub.com" className="text-blue-500 underline">Hackathon</a></li> */}
-            <li>Traveled 2,000 miles to San Francisco for 4months</li>
-            <li>Played in a national CARIFTA chess tournament</li>
+          <Image
+            src={Google}
+            alt="ivoine"
+            height={90}
+            width={90}
+            className="rounded-xl object-cover"
+          />
+        </div>
+
+        {/* Short intro */}
+        <p className="font-mono text-[15px] mb-4 text-gray-800">
+          hi! i&apos;m ivoine.
+        </p>
+
+        {/* About section */}
+        <div className="mb-4">
+          <div className="inline-block bg-gray-100 text-gray-500 text-xs font-mono px-3 py-1 rounded mb-3">
+            about
+          </div>
+          <p className="font-mono text-[15px] leading-relaxed text-gray-800">
+            I&apos;m a high school dropout with an obsession for technology and making a difference.
+            Born in The Bahamas, currently based in China. Traveled 2,000 miles to San Francisco,
+            and once played in a national CARIFTA chess tournament.
+          </p>
+        </div>
+
+        {/* Currently building */}
+        <div className="mb-4">
+          <div className="inline-block bg-gray-100 text-gray-500 text-xs font-mono px-3 py-1 rounded mb-3">
+            now
+          </div>
+          <p className="font-mono text-[15px] leading-relaxed text-gray-800">
+            Building financial infrastructure for The Bahamas — a unified payment network designed to
+            modernize how money moves across the islands.
+          </p>
+        </div>
+
+        {/* Merchants image */}
+        <div className="mb-4 relative">
+          <Image
+            src={Merchants}
+            alt="merchants"
+            width={800}
+            height={400}
+            className="w-full cursor-zoom-in hover:opacity-90 transition-opacity duration-200"
+            style={{ objectFit: "cover", objectPosition: "center 40%", width: "100%", maxHeight: "220px" }}
+            onClick={() => setLightbox(true)}
+          />
+        </div>
+
+        {/* Lightbox */}
+        {lightbox && (
+          <div
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 cursor-zoom-out"
+            onClick={() => setLightbox(false)}
+          >
+            <div className="max-w-3xl w-full px-4">
+              <Image
+                src={Merchants}
+                alt="merchants full"
+                width={1200}
+                height={900}
+                className="w-full object-contain rounded"
+              />
+              <a
+                href="https://en.wikipedia.org/wiki/Sogdia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center font-mono text-xs text-gray-400 hover:text-white mt-3"
+                onClick={e => e.stopPropagation()}
+              >
+                Sogdian merchants — Wikipedia ↗
+              </a>
+            </div>
+          </div>
+        )}
+
+        {/* Backed by */}
+        <div className="mb-6">
+          <div className="inline-block bg-gray-100 text-gray-500 text-xs font-mono px-3 py-1 rounded mb-3">
+            backed by
+          </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-[14px]">
+            <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">Hack Club</a>
+            <a href="https://www.1517fund.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">1517 Fund</a>
+            <a href="https://tylercowen.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">Tyler Cowen</a>
+            <a href="https://www.prometheusxtalent.com/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">PrometheusX</a>
+            <a href="https://ericschmidt.com/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">Eric Schmidt</a>
+            <a href="https://www.yvonnebajela.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">Yvonne Bajela</a>
+            <span className="text-gray-400">+ more</span>
           </div>
         </div>
-        <div>
-        <iframe className="mt-5" src="https://open.spotify.com/embed/track/0aJrYfARfCKzv6gXjhs4SZ?utm_source=generator=0" width="100%" height="152" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-      </main>
-     </div>
-      </div>
-      <div >
+
+
+        {/* Blog Posts Section */}
         <Portfolio />
-      </div>
+      </main>
     </div>
   );
 };
