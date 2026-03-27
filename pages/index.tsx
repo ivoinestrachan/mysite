@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 
         {/* Short intro */}
         <p className="font-mono text-[15px] mb-4 text-gray-800">
-          hi! i&apos;m ivoine.
+          hi! i&apos;m ivoine. i&apos;m 21.
         </p>
 
         {/* About section */}
