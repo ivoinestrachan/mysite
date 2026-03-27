@@ -7,8 +7,8 @@ import img1 from "../assets/IMG_3871.jpg";
 import img2 from "../assets/IMG_3872.jpg";
 import img3 from "../assets/photo-3509_singular_display_fullPicture.jpg";
 import img4 from "../assets/IMG_3249.jpg";
-import img5 from "../assets/bf2555b688a636e5aedbcd8e63f99283.JPG";
-import img6 from "../assets/69EA0E58-D3FE-4401-938B-9C438DAB3BEF.JPG";
+import img5 from "../assets/bf2555b688a636e5aedbcd8e63f99283.jpg";
+import img6 from "../assets/69EA0E58-D3FE-4401-938B-9C438DAB3BEF.jpg";
 
 const Shenzhen: NextPage = () => {
   return (
