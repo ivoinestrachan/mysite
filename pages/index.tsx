@@ -2,8 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import Google from "../assets/pfp.jpg"
-import Merchants from "../assets/merchants.PNG"
 import Portfolio from "../components/portfolio";
 
 const Home: NextPage = () => {
@@ -30,7 +28,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <Image
-            src={Google}
+            src="/pfp.jpg"
             alt="ivoine"
             height={90}
             width={90}
@@ -69,7 +67,7 @@ const Home: NextPage = () => {
         {/* Merchants image */}
         <div className="mb-4 relative">
           <Image
-            src={Merchants}
+            src="/merchants.png"
             alt="merchants"
             width={800}
             height={400}
@@ -87,7 +85,7 @@ const Home: NextPage = () => {
           >
             <div className="max-w-3xl w-full px-4">
               <Image
-                src={Merchants}
+                src="/merchants.png"
                 alt="merchants full"
                 width={1200}
                 height={900}

@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Letter from '../components/letter';
 import Image from 'next/image';
-import env from '../assets/env.png';
 
 const valentines = () => {
   const [isOpen, setIsOpen] = useState(false);
