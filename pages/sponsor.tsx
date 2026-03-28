@@ -192,7 +192,7 @@ const sponsor = () => {
           Donations: Every contribution helps, no matter the size. Plus, I’ve
           partnered with{" "}
           <a href="https://hackclub.com" className="text-blue-500 underline">
-            Hack Club
+            Ron Conway
           </a>{" "}
           a 501(c)(3) non-profit, making your donations{" "}
           <span className="font-bold">tax-deductible</span>{" "}

@@ -110,7 +110,7 @@ const Home: NextPage = () => {
             backed by
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-[14px]">
-            <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">Hack Club</a>
+            <a href="https://en.wikipedia.org/wiki/Ron_Conway" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">Ron Conway</a>
             <a href="https://www.1517fund.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">1517 Fund</a>
             <a href="https://tylercowen.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">Tyler Cowen</a>
             <a href="https://www.prometheusxtalent.com/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">PrometheusX</a>
