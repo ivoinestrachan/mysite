@@ -35,6 +35,13 @@ const Portfolio = () => {
       external: false,
     },
     {
+      year: "2025",
+      title: "Conference in Ghana, Africa",
+      desc: "Traveled to Ghana for a conference for a grant I won — still editing",
+      href: "#",
+      external: false,
+    },
+    {
       year: "2024",
       title: "Tazer Me Elmo",
       desc: "Built this so when my roommates walk near the elmo they would get shocked",
