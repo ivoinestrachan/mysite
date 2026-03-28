@@ -59,7 +59,7 @@ const Home: NextPage = () => {
             now
           </div>
           <p className="font-mono text-[15px] leading-relaxed text-gray-800">
-            Building financial infrastructure for The Bahamas — a unified payment network designed to
+            Building <a href="https://dberi.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-500 transition-colors">financial infrastructure</a> for The Bahamas — a unified payment network designed to
             modernize how money moves across the islands.
           </p>
         </div>
