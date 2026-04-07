@@ -45,7 +45,7 @@ const Memo: NextPage = () => {
                 <td className="py-3 px-4 font-semibold bg-gray-50">Investment</td>
                 <td className="py-3 px-4">TBC</td>
                 <td className="py-3 px-4 font-semibold bg-gray-50">Domicile</td>
-                <td className="py-3 px-4">The Bahamas</td>
+                <td className="py-3 px-4">United States</td>
               </tr>
               <tr>
                 <td className="py-3 px-4 font-semibold bg-gray-50">Operating Jurisdictions</td>
