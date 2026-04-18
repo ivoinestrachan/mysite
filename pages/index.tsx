@@ -12,6 +12,61 @@ const Home: NextPage = () => {
       <Head>
         <title>Ivoine Strachan</title>
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Schema.org Person Markup for Google Knowledge Panel */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Ivoine Strachan",
+              "birthDate": "2005-03-23",
+              "url": "https://ivoine.dev",
+              "image": "https://ivoine.dev/pfp.jpg",
+              "jobTitle": "Technologist",
+              "description": "21-year-old technologist from The Bahamas specializing in software and hardware. Former Roblox intern at age 16. Building a haptic VR suit inspired by Ready Player One. Best chess player in The Bahamas at age 10. Learned to code on his phone with limited electricity and internet access.",
+              "nationality": {
+                "@type": "Country",
+                "name": "The Bahamas"
+              },
+              "knowsAbout": ["Software", "Hardware", "Virtual Reality", "Haptics", "VR Technology", "Electronics", "Chess", "Game Development"],
+              "award": [
+                "Best Chess Player in The Bahamas at Age 10",
+                "Emergent Ventures Africa and Caribbean Grant Recipient (6th Cohort, 2025)"
+              ],
+              "hasOccupation": [
+                {
+                  "@type": "Role",
+                  "roleName": "Intern",
+                  "startDate": "2021",
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "Roblox"
+                  }
+                }
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/in/ivoine/",
+                "https://x.com/ivoinetech",
+                "https://github.com/ivoinestrachan",
+                "https://www.instagram.com/logicalvon",
+                "https://www.youtube.com/watch?v=NrlT8AIMXR0",
+                "https://makezine.com/article/technology/hack-club-creating-a-foundation-to-empower-thousands-of-teen-makers-worldwide/",
+                "https://marginalrevolution.com/marginalrevolution/2025/02/emergent-ventures-africa-and-caribbean-sixth-cohort.html",
+                "https://podcasts.apple.com/us/podcast/ep-7-ivoine-strachan-from-no-electricity-and-learning/id1746801467?i=1000669773064"
+              ],
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "High School Dropout"
+              },
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Independent"
+              }
+            })
+          }}
+        />
       </Head>
 
       <main className="w-full px-5 md:px-16 mt-8 mb-20">
