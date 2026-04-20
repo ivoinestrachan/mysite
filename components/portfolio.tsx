@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import shenzhen1 from "../assets/IMG_3871.jpg";
 
 interface Item {
@@ -15,7 +16,7 @@ const Portfolio = () => {
     {
       year: "2026",
       title: "Shenzhen, China",
-      desc: "Currently here — building robots and meeting people",
+      desc: "Spent 4 months building robots and meeting people",
       href: "/shenzhen",
       external: false,
       thumb: shenzhen1,
@@ -114,36 +115,67 @@ const Portfolio = () => {
       <ul className="space-y-3">
         {items.map((item, index) => (
           <li key={index}>
-            <a
-              href={item.href}
-              target={item.external ? "_blank" : undefined}
-              rel={item.external ? "noopener noreferrer" : undefined}
-              className="flex items-center gap-3 group hover:bg-gray-50 rounded-lg p-2 -mx-2 transition-colors"
-            >
-              {/* Thumbnail */}
-              <div className="w-12 h-12 shrink-0 bg-gray-100 rounded overflow-hidden">
-                {item.thumb && (
-                  <Image
-                    src={item.thumb}
-                    alt={item.title}
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-cover"
-                  />
-                )}
-              </div>
-
-              {/* Text */}
-              <div className="flex-1 min-w-0">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-gray-400 font-mono text-[12px] shrink-0">{item.year}</span>
-                  <span className="font-mono text-[14px] text-blue-500 group-hover:underline truncate">{item.title}</span>
+            {item.external ? (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group hover:bg-gray-50 rounded-lg p-2 -mx-2 transition-colors"
+              >
+                {/* Thumbnail */}
+                <div className="w-12 h-12 shrink-0 bg-gray-100 rounded overflow-hidden">
+                  {item.thumb && (
+                    <Image
+                      src={item.thumb}
+                      alt={item.title}
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
-                {item.desc && (
-                  <p className="font-mono text-[12px] text-gray-500 truncate">{item.desc}</p>
-                )}
-              </div>
-            </a>
+
+                {/* Text */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-gray-400 font-mono text-[12px] shrink-0">{item.year}</span>
+                    <span className="font-mono text-[14px] text-blue-500 group-hover:underline truncate">{item.title}</span>
+                  </div>
+                  {item.desc && (
+                    <p className="font-mono text-[12px] text-gray-500 truncate">{item.desc}</p>
+                  )}
+                </div>
+              </a>
+            ) : (
+              <Link
+                href={item.href}
+                className="flex items-center gap-3 group hover:bg-gray-50 rounded-lg p-2 -mx-2 transition-colors"
+              >
+                {/* Thumbnail */}
+                <div className="w-12 h-12 shrink-0 bg-gray-100 rounded overflow-hidden">
+                  {item.thumb && (
+                    <Image
+                      src={item.thumb}
+                      alt={item.title}
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+
+                {/* Text */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-gray-400 font-mono text-[12px] shrink-0">{item.year}</span>
+                    <span className="font-mono text-[14px] text-blue-500 group-hover:underline truncate">{item.title}</span>
+                  </div>
+                  {item.desc && (
+                    <p className="font-mono text-[12px] text-gray-500 truncate">{item.desc}</p>
+                  )}
+                </div>
+              </Link>
+            )}
           </li>
         ))}
       </ul>

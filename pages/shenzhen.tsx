@@ -15,6 +15,9 @@ const Shenzhen: NextPage = () => {
     <div className="max-w-3xl mx-auto px-5 md:px-16 mt-10 mb-20">
       <Head>
         <title>Shenzhen, China — Ivoine Strachan</title>
+        <link rel="canonical" href="https://ivoine.dev/shenzhen" />
+        <meta name="description" content="I spent 4 months in Shenzhen building robots and meeting people. A journey of a thousand miles begins with a single step." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/" className="font-mono text-gray-400 hover:text-gray-600 text-sm mb-8 block">
         ← back
@@ -23,7 +26,7 @@ const Shenzhen: NextPage = () => {
       <h1 className="font-mono font-extrabold text-[32px] mb-4">Shenzhen, China</h1>
 
       <p className="font-mono text-[15px] leading-relaxed text-gray-800 mb-3">
-        I&apos;ve been here for the past 4 months building robots and meeting people.
+        I spent 4 months here building robots and meeting people.
       </p>
 
       <p className="font-mono text-[18px] text-gray-400 mb-1">千里之行，始于足下</p>

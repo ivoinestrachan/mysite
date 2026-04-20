@@ -7,6 +7,9 @@ const LearningToWeld: NextPage = () => {
     <div className="max-w-2xl mx-auto px-5 md:px-10 mt-10 mb-20">
       <Head>
         <title>Learnt How to Weld — Ivoine Strachan</title>
+        <link rel="canonical" href="https://ivoine.dev/learning-to-weld" />
+        <meta name="description" content="During my stay in the Bay Area I learnt how to weld which was pretty cool. I welded a really cool piece together at the end of the day." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/" className="font-mono text-gray-400 hover:text-gray-600 text-sm mb-8 block">
         ← back

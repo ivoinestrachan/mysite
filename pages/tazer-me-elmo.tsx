@@ -8,6 +8,9 @@ const TazerMeElmo: NextPage = () => {
     <div className="max-w-2xl mx-auto px-5 md:px-10 mt-10 mb-20">
       <Head>
         <title>Tazer Me Elmo — Ivoine Strachan</title>
+        <link rel="canonical" href="https://ivoine.dev/tazer-me-elmo" />
+        <meta name="description" content="Built this so when my roommates walk near the elmo they would get shocked. It really ended up being funny — nobody expected it." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/" className="font-mono text-gray-400 hover:text-gray-600 text-sm mb-8 block">
         ← back

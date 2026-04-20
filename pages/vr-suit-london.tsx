@@ -7,6 +7,9 @@ const VRSuitLondon: NextPage = () => {
     <div className="max-w-2xl mx-auto px-5 md:px-10 mt-10 mb-20">
       <Head>
         <title>Building a VR Suit in London — Ivoine Strachan</title>
+        <link rel="canonical" href="https://ivoine.dev/vr-suit-london" />
+        <meta name="description" content="Hardware project — building a full VR suit from the ground up in London." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/" className="font-mono text-gray-400 hover:text-gray-600 text-sm mb-8 block">
         ← back

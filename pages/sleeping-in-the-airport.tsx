@@ -8,6 +8,9 @@ const SleepingInTheAirport: NextPage = () => {
     <div className="max-w-2xl mx-auto px-5 md:px-10 mt-10 mb-20">
       <Head>
         <title>Sleeping in the Airport — Ivoine Strachan</title>
+        <link rel="canonical" href="https://ivoine.dev/sleeping-in-the-airport" />
+        <meta name="description" content="Moving to San Francisco for the year. Moving into my apartment with three random people I had never met. It started with sleeping in the airport." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/" className="font-mono text-gray-400 hover:text-gray-600 text-sm mb-8 block">
         ← back

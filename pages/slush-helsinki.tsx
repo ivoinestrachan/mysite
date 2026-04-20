@@ -7,6 +7,9 @@ const SlushHelsinki: NextPage = () => {
     <div className="max-w-2xl mx-auto px-5 md:px-10 mt-10 mb-20">
       <Head>
         <title>Slush — London to Helsinki — Ivoine Strachan</title>
+        <link rel="canonical" href="https://ivoine.dev/slush-helsinki" />
+        <meta name="description" content="Invited to Slush, rode in a caravan all the way from London to Helsinki." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/" className="font-mono text-gray-400 hover:text-gray-600 text-sm mb-8 block">
         ← back

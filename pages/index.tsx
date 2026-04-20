@@ -12,6 +12,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Ivoine Strachan</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://ivoine.dev" />
+        <meta name="description" content="21-year-old technologist from The Bahamas specializing in software and hardware. Former Roblox intern at age 16. Building financial infrastructure for The Bahamas." />
 
         {/* Schema.org Person Markup for Google Knowledge Panel */}
         <script
@@ -103,7 +105,7 @@ const Home: NextPage = () => {
           </div>
           <p className="font-mono text-[15px] leading-relaxed text-gray-800">
             I&apos;m a high school dropout with an obsession for technology and making a difference.
-            Born in The Bahamas, currently based in China. Traveled 2,000 miles to San Francisco,
+            Born and currently based in The Bahamas. Traveled 2,000 miles to San Francisco,
             and once played in a national CARIFTA chess tournament.
           </p>
         </div>

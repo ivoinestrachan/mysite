@@ -7,6 +7,8 @@ const Memo: NextPage = () => {
     <div className="max-w-5xl mx-auto bg-white">
       <Head>
         <title>Investment Memo - dberi | Ivoine Strachan</title>
+        <link rel="canonical" href="https://ivoine.dev/memo" />
+        <meta name="description" content="Investment memo for dberi - building the payments and remittance platform for the Caribbean tourism economy." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

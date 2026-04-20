@@ -8,6 +8,9 @@ const FlyingToSF: NextPage = () => {
     <div className="max-w-2xl mx-auto px-5 md:px-10 mt-10 mb-20">
       <Head>
         <title>Flying to San Francisco — Ivoine Strachan</title>
+        <link rel="canonical" href="https://ivoine.dev/flying-to-sf" />
+        <meta name="description" content="I flew to San Francisco with the hope of getting an internship and meeting wonderful new people and building cool projects. I was able to get a referral at Google." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/" className="font-mono text-gray-400 hover:text-gray-600 text-sm mb-8 block">
         ← back
