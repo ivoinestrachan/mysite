@@ -44,7 +44,7 @@ const Donate: NextPage = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto sm:px-6 px-4">
+    <div className="max-w-5xl mx-auto sm:px-6 px-4">
       <Head>
         <title>Helping grandmother</title>
         <link rel="icon" href="/favicon.ico" />
@@ -54,40 +54,60 @@ const Donate: NextPage = () => {
         />
       </Head>
 
-      <div className="mt-[130px]">
-        <h1 className="font-bold sm:text-[32px] text-[24px]">
-          Support my grandmother
-        </h1>
+      <div className="mt-[130px] grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-start">
+        <div className="md:col-span-3">
+          <h1 className="font-bold sm:text-[32px] text-[24px]">
+            Support my grandmother
+          </h1>
 
-        <p className="mt-4 text-gray-700 leading-relaxed">
-          My grandmother raised me and means everything to me. She recently
-          suffered a stroke and is in the hospital back home. I&apos;m raising
-          funds to fly back to The Bahamas to take care of her and to cover her
-          medical costs.
-        </p>
+          <p className="mt-4 text-gray-700 leading-relaxed">
+            My name is Ivoine, a 21 year old builder and jack of all trades from
+            The Bahamas. I grew up without electricity and taught myself to code
+            on my phone. Since then I&apos;ve been obsessed with making things,
+            from game development on Roblox as a kid to building hardware and
+            software today. Building is how I make sense of the world and how I
+            try to give back.
+          </p>
 
-        <div className="mt-5">
-          <div className="font-bold">What your donation covers</div>
-          <ul className="mt-2 space-y-2 text-gray-700">
-            <li className="flex justify-between">
-              <span>Flight home to The Bahamas to care for her</span>
-              <span className="font-semibold whitespace-nowrap ml-4">$1,200</span>
-            </li>
-            <li className="flex justify-between">
-              <span>MRI / CT scan with contrast</span>
-              <span className="font-semibold whitespace-nowrap ml-4">$660</span>
-            </li>
-            <li className="flex justify-between border-t border-gray-200 pt-2 font-bold">
-              <span>Total needed</span>
-              <span className="whitespace-nowrap ml-4">$1,860</span>
-            </li>
-          </ul>
+          <p className="mt-4 text-gray-700 leading-relaxed">
+            My grandmother raised me after I lost my mother at 16, and she means
+            everything to me. She is the reason I never gave up. She kept me
+            fed, kept me believing, and pushed me to chase things far bigger
+            than where we came from. Everything I&apos;ve built, I&apos;ve built
+            because of her.
+          </p>
+
+          <p className="mt-4 text-gray-700 leading-relaxed">
+            She recently suffered a stroke and is in the hospital back home. I
+            am raising funds to fly back to The Bahamas to take care of her and
+            to cover her medical costs. Right now I want to be there for her the
+            way she has always been there for me.
+          </p>
+
+          <div className="mt-6">
+            <div className="font-bold">What your donation covers</div>
+            <ul className="mt-2 space-y-2 text-gray-700">
+              <li className="flex justify-between">
+                <span>Flight home to The Bahamas to care for her</span>
+                <span className="font-semibold whitespace-nowrap ml-4">$1,200</span>
+              </li>
+              <li className="flex justify-between">
+                <span>MRI / CT scan with contrast</span>
+                <span className="font-semibold whitespace-nowrap ml-4">$660</span>
+              </li>
+              <li className="flex justify-between border-t border-gray-200 pt-2 font-bold">
+                <span>Total needed</span>
+                <span className="whitespace-nowrap ml-4">$1,860</span>
+              </li>
+            </ul>
+          </div>
+
+          <p className="mt-6 text-gray-700 leading-relaxed">
+            Anything you can give helps, and it means a lot to me. Thank you.
+          </p>
         </div>
 
-        <p className="mt-5 text-gray-700 leading-relaxed">
-          Anything you can give helps, and it means a lot to me. Thank you.
-        </p>
-        <div className="bg-white shadow-xl rounded-lg mt-8 p-6">
+        <div className="bg-white shadow-xl rounded-lg p-6 md:col-span-2 md:sticky md:top-8">
           <div className="font-bold text-[18px]">Choose an amount</div>
 
           <div className="grid grid-cols-3 gap-3 mt-4">
