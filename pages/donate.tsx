@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 const PRESET_AMOUNTS = [10, 25, 50] as const;
 const DONATION_BASE_URL = "https://hcb.hackclub.com/donations/start/ivoine";
+const GOAL_AMOUNT = 1860;
+const RAISED_AMOUNT = 300;
 
 const Donate: NextPage = () => {
   const [selected, setSelected] = useState<number | null>(25);
@@ -108,6 +110,31 @@ const Donate: NextPage = () => {
         </div>
 
         <div className="bg-white shadow-xl rounded-lg p-6 md:col-span-2 md:sticky md:top-8">
+          <div className="mb-6">
+            <div className="flex items-baseline justify-between">
+              <span className="font-bold text-[24px]">
+                ${RAISED_AMOUNT.toLocaleString()}
+              </span>
+              <span className="text-gray-500 text-sm">
+                raised of ${GOAL_AMOUNT.toLocaleString()} goal
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-3 mt-3 overflow-hidden">
+              <div
+                className="bg-green-500 h-3 rounded-full transition-all"
+                style={{
+                  width: `${Math.min(
+                    100,
+                    Math.round((RAISED_AMOUNT / GOAL_AMOUNT) * 100)
+                  )}%`,
+                }}
+              />
+            </div>
+            <div className="text-gray-500 text-sm mt-2">
+              {Math.round((RAISED_AMOUNT / GOAL_AMOUNT) * 100)}% of the way there
+            </div>
+          </div>
+
           <div className="font-bold text-[18px]">Choose an amount</div>
 
           <div className="grid grid-cols-3 gap-3 mt-4">
