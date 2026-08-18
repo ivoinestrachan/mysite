@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <title>Ivoine Strachan</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://ivoine.dev" />
-        <meta name="description" content="21-year-old technologist from The Bahamas specializing in software and hardware. Former Roblox intern at age 16. Building financial infrastructure for The Bahamas — a unified payment network designed to modernize how money moves across the islands." />
+        <meta name="description" content="21-year-old technologist from The Bahamas specializing in software and hardware. Former Roblox intern at age 16. Building The Farming Company — autonomous robots that pull weeds without chemicals and bring farmland back to life." />
 
         {/* Schema.org Person Markup for Google Knowledge Panel */}
         <script
@@ -116,8 +116,8 @@ const Home: NextPage = () => {
             now
           </div>
           <p className="font-mono text-[15px] leading-relaxed text-gray-800">
-            Building <a href="https://dberi.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-500 transition-colors">financial infrastructure</a> for The Bahamas — a unified payment network designed to
-            modernize how money moves across the islands.
+            Building <a href="https://thefarmco.xyz" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-500 transition-colors">The Farming Company</a>. Autonomous robots that pull weeds without
+            chemicals and bring farmland back to life.
           </p>
         </div>
 
