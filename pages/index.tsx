@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <title>Ivoine Strachan</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://ivoine.dev" />
-        <meta name="description" content="21-year-old technologist from The Bahamas specializing in software and hardware. Former Roblox intern at age 16. Building financial infrastructure for The Bahamas." />
+        <meta name="description" content="21-year-old technologist from The Bahamas specializing in software and hardware. Former Roblox intern at age 16. Building financial infrastructure for The Bahamas — a unified payment network designed to modernize how money moves across the islands." />
 
         {/* Schema.org Person Markup for Google Knowledge Panel */}
         <script
