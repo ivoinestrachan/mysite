@@ -48,7 +48,6 @@ const Portfolio = () => {
       desc: "Built this so when my roommates walk near the elmo they would get shocked",
       href: "/tazer-me-elmo",
       external: false,
-      thumb: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1717421217/Photo_Jan_19_2024_niucsj.jpg",
     },
     {
       year: "2024",
@@ -56,7 +55,6 @@ const Portfolio = () => {
       desc: "Explored Boston and built a robotic arm",
       href: "/hackathon-boston",
       external: false,
-      thumb: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1717355546/Alexa_IMG_8200_u96t9f.webp",
     },
     {
       year: "2023",
@@ -64,7 +62,6 @@ const Portfolio = () => {
       desc: "Moving to San Francisco for the year",
       href: "/sleeping-in-the-airport",
       external: false,
-      thumb: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1717354310/Photo_Jan_2_2024_cys0ac.jpg",
     },
     {
       year: "2023",
@@ -72,7 +69,6 @@ const Portfolio = () => {
       desc: "Got a referral at Google and met wonderful people",
       href: "/flying-to-sf",
       external: false,
-      thumb: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697059653/IMG_7261_rbog4t.jpg",
     },
     {
       year: "2023",
@@ -87,7 +83,6 @@ const Portfolio = () => {
       desc: "iOS development for a social media app",
       href: "https://github.com/joinbubbel/bubbel-ios",
       external: true,
-      thumb: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697064339/Sike_Thinking_Image_h9imli.png",
     },
     {
       year: "2023",
@@ -102,7 +97,6 @@ const Portfolio = () => {
       desc: "A game about love and graphing, built by teenagers",
       href: "https://github.com/hackclub/sinerider",
       external: true,
-      thumb: "https://res.cloudinary.com/dxmrcocqb/image/upload/v1697062291/Ivoine_Journey_xqoj1o.png",
     },
   ];
 
