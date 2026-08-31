@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import shenzhen1 from "../assets/IMG_3871.jpg";
+import { PostMeta } from "../lib/posts";
 
 interface Item {
   year: string;
@@ -11,7 +13,14 @@ interface Item {
   thumb?: StaticImageData | string;
 }
 
-const Portfolio = () => {
+type Tab = "projects" | "writings";
+
+interface PortfolioProps {
+  writings?: PostMeta[];
+}
+
+const Portfolio = ({ writings = [] }: PortfolioProps) => {
+  const [tab, setTab] = useState<Tab>("projects");
   const items: Item[] = [
     {
       year: "2026",
@@ -102,10 +111,31 @@ const Portfolio = () => {
 
   return (
     <div className="w-full mt-8">
-      <div className="inline-block bg-gray-100 text-gray-500 text-xs font-mono px-3 py-1 rounded mb-4">
-        work
+      <div className="flex items-center gap-2 font-mono text-xs mb-4">
+        <button
+          onClick={() => setTab("projects")}
+          className={`px-3 py-1 rounded transition-colors ${
+            tab === "projects"
+              ? "bg-gray-100 text-gray-800"
+              : "text-gray-400 hover:text-gray-600"
+          }`}
+        >
+          projects
+        </button>
+        <span className="text-gray-300">|</span>
+        <button
+          onClick={() => setTab("writings")}
+          className={`px-3 py-1 rounded transition-colors ${
+            tab === "writings"
+              ? "bg-gray-100 text-gray-800"
+              : "text-gray-400 hover:text-gray-600"
+          }`}
+        >
+          writings
+        </button>
       </div>
 
+      {tab === "projects" && (
       <ul className="space-y-3">
         {items.map((item, index) => (
           <li key={index}>
@@ -173,6 +203,44 @@ const Portfolio = () => {
           </li>
         ))}
       </ul>
+      )}
+
+      {tab === "writings" && (
+        <div>
+          {writings.length === 0 ? (
+            <p className="font-mono text-[13px] text-gray-400 p-2">
+              Nothing here yet — writing soon.
+            </p>
+          ) : (
+            <ul className="space-y-3">
+              {writings.map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    href={`/writing/${post.slug}`}
+                    className="flex items-center gap-3 group hover:bg-gray-50 rounded-lg p-2 -mx-2 transition-colors"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-gray-400 font-mono text-[12px] shrink-0">
+                          {post.date?.slice(0, 4)}
+                        </span>
+                        <span className="font-mono text-[14px] text-blue-500 group-hover:underline truncate">
+                          {post.title}
+                        </span>
+                      </div>
+                      {post.description && (
+                        <p className="font-mono text-[12px] text-gray-500 truncate">
+                          {post.description}
+                        </p>
+                      )}
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
     </div>
   );
 };

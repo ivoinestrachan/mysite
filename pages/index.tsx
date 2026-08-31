@@ -1,10 +1,15 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import Portfolio from "../components/portfolio";
+import { getAllPostsMeta, PostMeta } from "../lib/posts";
 
-const Home: NextPage = () => {
+interface HomeProps {
+  writings: PostMeta[];
+}
+
+const Home: NextPage<HomeProps> = ({ writings }) => {
   const [lightbox, setLightbox] = useState(false);
 
   return (
@@ -179,10 +184,18 @@ const Home: NextPage = () => {
 
 
         {/* Blog Posts Section */}
-        <Portfolio />
+        <Portfolio writings={writings} />
       </main>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  return {
+    props: {
+      writings: getAllPostsMeta(),
+    },
+  };
 };
 
 export default Home;

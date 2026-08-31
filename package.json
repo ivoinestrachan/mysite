@@ -12,10 +12,13 @@
     "audit": "^0.0.6",
     "fix": "^0.0.6",
     "framer-motion": "^12.0.6",
+    "gray-matter": "^4.0.3",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-fast-marquee": "^1.6.2",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "swr": "^2.2.4",
     "use-sound": "^4.0.1"
   },
