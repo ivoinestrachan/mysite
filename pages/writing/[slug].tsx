@@ -46,8 +46,57 @@ const WritingPage: NextPage<WritingPageProps> = ({ post }) => {
           </div>
         )}
 
-        <article className="prose mt-8 leading-relaxed text-gray-800 space-y-4">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        <article className="mt-8 text-gray-800 text-[17px]">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              p: ({ children }) => (
+                <p className="leading-relaxed mb-6">{children}</p>
+              ),
+              h2: ({ children }) => (
+                <h2 className="font-bold text-[24px] mt-10 mb-4">{children}</h2>
+              ),
+              h3: ({ children }) => (
+                <h3 className="font-bold text-[20px] mt-8 mb-3">{children}</h3>
+              ),
+              a: ({ href, children }) => (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline hover:text-blue-600"
+                >
+                  {children}
+                </a>
+              ),
+              ul: ({ children }) => (
+                <ul className="list-disc pl-6 mb-6 space-y-2">{children}</ul>
+              ),
+              ol: ({ children }) => (
+                <ol className="list-decimal pl-6 mb-6 space-y-2">{children}</ol>
+              ),
+              blockquote: ({ children }) => (
+                <blockquote className="border-l-4 border-gray-200 pl-4 italic text-gray-600 my-6">
+                  {children}
+                </blockquote>
+              ),
+              img: ({ src, alt }) => (
+                <figure className="my-8">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={typeof src === "string" ? src : ""}
+                    alt={alt ?? ""}
+                    className="w-full rounded-lg border border-gray-100"
+                  />
+                  {alt && (
+                    <figcaption className="text-center text-sm text-gray-400 mt-2">
+                      {alt}
+                    </figcaption>
+                  )}
+                </figure>
+              ),
+            }}
+          >
             {post.content}
           </ReactMarkdown>
         </article>
