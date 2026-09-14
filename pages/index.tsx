@@ -87,6 +87,7 @@ const Home: NextPage<HomeProps> = ({ writings }) => {
               <a href="https://github.com/ivoinestrachan" className="text-gray-500 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://x.com/ivoinetech" className="text-gray-500 hover:underline" target="_blank" rel="noopener noreferrer">Twitter</a>
               <a href="https://www.linkedin.com/in/ivoine/" className="text-gray-500 hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:logic@ivoine.dev" className="text-gray-500 hover:underline">Email</a>
             </div>
           </div>
           <Image
