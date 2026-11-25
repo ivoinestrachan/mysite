@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const PRESET_AMOUNTS = [10, 25, 50] as const;
 const DONATION_BASE_URL = "https://hcb.hackclub.com/donations/start/ivoine";
-const GOAL_AMOUNT = 1860;
-const RAISED_AMOUNT = 1109;
+const GOAL_AMOUNT = 3300;
+const RAISED_AMOUNT = 5;
 
 const Donate: NextPage = () => {
   const [selected, setSelected] = useState<number | null>(25);
@@ -29,6 +30,8 @@ const Donate: NextPage = () => {
 
   const isValid = amount !== null && amount > 0;
 
+  const percentRaised = (RAISED_AMOUNT / GOAL_AMOUNT) * 100;
+
   const handlePreset = (value: number) => {
     setSelected(value);
     setCustom("");
@@ -48,64 +51,108 @@ const Donate: NextPage = () => {
   return (
     <div className="max-w-5xl mx-auto sm:px-6 px-4">
       <Head>
-        <title>Helping grandmother</title>
+        <title>Help me recover from a broken shinbone</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Help support my grandmother while she is in the hospital. Every donation makes a difference."
+          content="I was hit by a car while riding my bike and fractured the top of my shinbone. I'm raising money for scans, a clinic visit, and physical therapy. Every donation makes a difference."
         />
       </Head>
 
       <div className="mt-[130px] grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-start">
         <div className="md:col-span-3">
           <h1 className="font-bold sm:text-[32px] text-[24px]">
-            Support my grandmother
+            Help me recover from a broken shinbone
           </h1>
 
           <p className="mt-4 text-gray-700 leading-relaxed">
-            My name is Ivoine, a 21 year old builder and jack of all trades from
-            The Bahamas. I grew up without electricity and taught myself to code
-            on my phone. Since then I&apos;ve been obsessed with making things,
-            from game development on Roblox as a kid to building hardware and
-            software today. Building is how I make sense of the world and how I
-            try to give back.
+            I got hit by a car while I was riding my bike. I kept putting off
+            going to the clinic because I knew I couldn&apos;t afford the bill,
+            and I was hoping it would heal on its own. I finally went in for a
+            follow-up today and they did another scan. The top of my shinbone is
+            fractured.
           </p>
 
           <p className="mt-4 text-gray-700 leading-relaxed">
-            My grandmother raised me after I lost my mother at 16, and she means
-            everything to me. She is the reason I never gave up. She kept me
-            fed, kept me believing, and pushed me to chase things far bigger
-            than where we came from. Everything I&apos;ve built, I&apos;ve built
-            because of her.
+            I&apos;ve been wearing a brace to keep my leg in the right position,
+            and the doctor, Frank H. Valone, said I should start treatment. I
+            filed a police report after the crash and I&apos;m hoping the
+            investigation leads somewhere, that they catch the driver and that
+            the hospital bill gets covered. But the clinic needs to be paid
+            either way, so the visit and the scans are still on me, and I
+            can&apos;t work right now, so the bills are piling up.
           </p>
 
-          <p className="mt-4 text-gray-700 leading-relaxed">
-            She recently suffered a stroke and is in the hospital back home. I
-            am raising funds to fly back to The Bahamas to take care of her and
-            to cover her medical costs. Right now I want to be there for her the
-            way she has always been there for me.
-          </p>
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-gray-100">
+              <Image
+                src="/donate/crutches.jpeg"
+                alt="Ivoine standing in the hospital hallway with crutches"
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-gray-100">
+              <Image
+                src="/donate/hospital-bed.jpeg"
+                alt="Ivoine in a hospital bed after the crash"
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-gray-100">
+              <Image
+                src="/donate/scan-room.jpeg"
+                alt="Getting a scan at the clinic"
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-600">
+            <span>San Francisco Police Department report</span>
+            <span className="text-gray-400">·</span>
+            <span>Case 260 678 807</span>
+            <span className="text-gray-400">·</span>
+            <a
+              href="/donate/police-report.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-green-600 underline hover:text-green-700"
+            >
+              View PDF
+            </a>
+          </div>
 
           <div className="mt-6">
             <div className="font-bold">What your donation covers</div>
             <ul className="mt-2 space-y-2 text-gray-700">
               <li className="flex justify-between">
-                <span>Flight home to The Bahamas to care for her</span>
-                <span className="font-semibold whitespace-nowrap ml-4">$1,200</span>
+                <span>MRI / X-ray</span>
+                <span className="font-semibold whitespace-nowrap ml-4">$1,000</span>
               </li>
               <li className="flex justify-between">
-                <span>MRI / CT scan with contrast</span>
-                <span className="font-semibold whitespace-nowrap ml-4">$660</span>
+                <span>Clinic visit</span>
+                <span className="font-semibold whitespace-nowrap ml-4">$300</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Physical therapy (12 recommended sessions)</span>
+                <span className="font-semibold whitespace-nowrap ml-4">$2,000</span>
               </li>
               <li className="flex justify-between border-t border-gray-200 pt-2 font-bold">
                 <span>Total needed</span>
-                <span className="whitespace-nowrap ml-4">$1,860</span>
+                <span className="whitespace-nowrap ml-4">$3,300</span>
               </li>
             </ul>
           </div>
 
           <p className="mt-6 text-gray-700 leading-relaxed">
-            Anything you can give helps, and it means a lot to me. Thank you.
+            Thanks for reading, and for anything you can give. It really means a
+            lot.
           </p>
         </div>
 
@@ -123,15 +170,14 @@ const Donate: NextPage = () => {
               <div
                 className="bg-green-500 h-3 rounded-full transition-all"
                 style={{
-                  width: `${Math.min(
-                    100,
-                    Math.round((RAISED_AMOUNT / GOAL_AMOUNT) * 100)
-                  )}%`,
+                  width: `${Math.min(100, percentRaised)}%`,
                 }}
               />
             </div>
             <div className="text-gray-500 text-sm mt-2">
-              {Math.round((RAISED_AMOUNT / GOAL_AMOUNT) * 100)}% of the way there
+              {percentRaised > 0 && percentRaised < 1
+                ? "Less than 1% of the way there"
+                : `${Math.round(percentRaised)}% of the way there`}
             </div>
           </div>
 
