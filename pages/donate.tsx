@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const PRESET_AMOUNTS = [10, 25, 50] as const;
 const DONATION_BASE_URL = "https://hcb.hackclub.com/donations/start/ivoine";
 const GOAL_AMOUNT = 3300;
-const RAISED_AMOUNT = 5;
+const RAISED_AMOUNT = 1005;
 
 const Donate: NextPage = () => {
   const [selected, setSelected] = useState<number | null>(25);
